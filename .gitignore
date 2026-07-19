@@ -18,3 +18,9 @@ Saved/
 # OS
 Thumbs.db
 .DS_Store
+
+# Local logs / stray archives
+build58_*.log
+package58.log
+dheerfather-*.zip
+New folder/
