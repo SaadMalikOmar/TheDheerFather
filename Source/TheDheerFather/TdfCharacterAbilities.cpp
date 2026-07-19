@@ -120,22 +120,12 @@ void UTdfAbility_DietCoke::ActivateAbility(const FGameplayAbilitySpecHandle Hand
 	const FGameplayEventData* TriggerEventData)
 {
 	APawn* Avatar = ActorInfo ? Cast<APawn>(ActorInfo->AvatarActor.Get()) : nullptr;
-	if (UsesLeft <= 0)
-	{
-		if (GEngine && Avatar && Avatar->IsLocallyControlled())
-		{
-			GEngine->AddOnScreenDebugMessage(-1, 1.5f, FColor::Silver, TEXT("No Diet Cokes left..."));
-		}
-		EndAbility(Handle, ActorInfo, ActivationInfo, true, true);
-		return;
-	}
-	if (!CommitAbility(Handle, ActorInfo, ActivationInfo))
+	if (IsOnCooldown(Avatar, CooldownEndTime) || !CommitAbility(Handle, ActorInfo, ActivationInfo))
 	{
 		EndAbility(Handle, ActorInfo, ActivationInfo, true, true);
 		return;
 	}
-	--UsesLeft;
-	HudUsesLeft = UsesLeft;
+	StartCooldown(Avatar, CooldownEndTime, Cooldown);
 
 	if (ActorInfo && SpeedBoostEffect)
 	{
@@ -153,8 +143,7 @@ void UTdfAbility_DietCoke::ActivateAbility(const FGameplayAbilitySpecHandle Hand
 
 	if (GEngine && Avatar && Avatar->IsLocallyControlled())
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Cyan,
-			FString::Printf(TEXT("DIET COKE! (%d left)"), UsesLeft));
+		GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Cyan, TEXT("DIET COKE! *crack* *glug*"));
 	}
 	EndAbility(Handle, ActorInfo, ActivationInfo, true, false);
 }

@@ -141,6 +141,19 @@ protected:
 	/** Right mouse released (Musa's voice notes record while held). */
 	virtual void OnSecondaryReleased() {}
 
+	/** Input wrappers: track RMB held state (drives survivor PEEKING) then dispatch the virtuals. */
+	void OnSecondaryPressedInternal();
+	void OnSecondaryReleasedInternal();
+
+	/** PEEKING: RMB held + A/D leans the camera around corners (survivors). */
+	bool bSecondaryHeld = false;
+	float PeekInput = 0.f;
+	float CurrentPeek = 0.f;
+	FVector CameraBaseRelLoc = FVector::ZeroVector;
+
+	/** While climbing, actor yaw is decoupled so you can look around (±135° on the trunk). */
+	bool bClimbLookDecoupled = false;
+
 	/** Tree climbing (everyone but Troos). Hold Jump against a trunk to shimmy up. */
 	virtual bool CanClimbTrees() const { return true; }
 	void OnJumpReleased();

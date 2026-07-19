@@ -51,7 +51,7 @@ private:
 	float CooldownEndTime = 0.f;
 };
 
-/** Lucki Q: Diet Coke — speed boost, only 3 cans per match. */
+/** Lucki T: Diet Coke — speed boost on a recharge (yes, even in Hardcore: he keeps a crate in the boot). */
 UCLASS()
 class THEDHEERFATHER_API UTdfAbility_DietCoke : public UTdfGameplayAbility
 {
@@ -62,8 +62,11 @@ public:
 	virtual void ActivateAbility(const FGameplayAbilitySpecHandle Handle, const FGameplayAbilityActorInfo* ActorInfo,
 		const FGameplayAbilityActivationInfo ActivationInfo, const FGameplayEventData* TriggerEventData) override;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Tdf") int32 UsesLeft = 3;
+	UPROPERTY(EditDefaultsOnly, Category = "Tdf") float Cooldown = 45.f;
 	UPROPERTY(EditDefaultsOnly, Category = "Tdf") TSubclassOf<UGameplayEffect> SpeedBoostEffect;
+
+private:
+	float CooldownEndTime = 0.f;
 };
 
 /** Lucki R: Spirit of Nani — places a doorbell trap that alerts him when runners pass. 4 uses. */
