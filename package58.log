@@ -1,0 +1,1231 @@
+﻿Running AutomationTool...
+Using bundled DotNet SDK version: 10.0 win-x64
+Starting AutomationTool...
+Parsing command line: BuildCookRun -project="D:\NSA Unreal Engine\New Folder For Migration\TheDheerFather.uproject" -platform=Win64 -clientconfig=Development -build -cook -stage -pak -archive -archivedirectory="D:\NSA Unreal Engine\Packaged" -noP4 -unattended -utf8output
+Initializing script modules...
+Total script module initialization time: 0.70 s.
+Using D:\VisualStudio\MSBuild\Current\Bin\MSBuild.exe
+Executing commands...
+Setting up ProjectParams for D:\NSA Unreal Engine\New Folder For Migration\TheDheerFather.uproject
+********** BUILD COMMAND STARTED **********
+Running: D:\Program Files 2\UE_5.8\Engine\Binaries\ThirdParty\DotNet\10.0\win-x64\dotnet.exe "D:\Program Files 2\UE_5.8\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -Target="TheDheerFatherEditor Win64 Development -Project=\"D:\NSA Unreal Engine\New Folder For Migration\TheDheerFather.uproject\"" -Target="TheDheerFather Win64 Development -Project=\"D:\NSA Unreal Engine\New Folder For Migration\TheDheerFather.uproject\"  -remoteini=\"D:\NSA Unreal Engine\New Folder For Migration\"  " -log="C:\Users\RedIce\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+Program+Files+2+UE_5.8\UBA-TheDheerFatherEditor-Win64-Development.txt"
+Log file: C:\Users\RedIce\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+Program+Files+2+UE_5.8\UBA-TheDheerFatherEditor-Win64-Development.txt
+Determining max actions to execute in parallel (8 physical cores, 8 logical cores)
+  Executing up to 8 processes, one per physical core
+  Requested 1.5 GB memory per action, 4.78 GB available: limiting max parallel actions to 3
+Creating makefile for TheDheerFather (no existing makefile)
+UbaServer - Listening on 0.0.0.0:1345
+Available x64 toolchains (1):
+Available x64 toolchains (1):
+ * D:\VisualStudio\VC\Tools\MSVC\14.51.36231
+    (Family=14.51.36231, FamilyRank=2, Version=14.51.36248, HostArchitecture=x64, ReleaseChannel=Latest, Architecture=x64)
+ * D:\VisualStudio\VC\Tools\MSVC\14.51.36231
+    (Family=14.51.36231, FamilyRank=2, Version=14.51.36248, HostArchitecture=x64, ReleaseChannel=Latest, Architecture=x64)
+Visual Studio compiler version 14.51.36248 is newer than latest preferred version 14.50.35717. Please use caution as this compiler has not been heavily tested
+Visual Studio compiler version 14.51.36248 is newer than latest preferred version 14.50.35717. Please use caution as this compiler has not been heavily tested
+UHT compiled-in object format Default
+Building TheDheerFatherEditor and TheDheerFather...
+===== Toolchain Information =====
+TheDheerFatherEditor Win64 Development:
+  Using ISPC compiler (D:\Program Files 2\UE_5.8\Engine\Source\ThirdParty\Intel\ISPC\bin\Windows\ispc.exe)
+    Intel(r) Implicit SPMD Program Compiler (Intel(r) ISPC), 1.24.0 (build commit  @ 20250404, LLVM 18.1.2)
+  Using Visual Studio 14.51.36248 toolchain (D:\VisualStudio\VC\Tools\MSVC\14.51.36231) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Warning: Visual Studio compiler 14.51.36248 is not a preferred version
+  [Adaptive Build] Excluded from TheDheerFather unity file: TdfAbilitySystemComponent.cpp, TdfAbility_GroundSmash.cpp, TdfAbility_Melee.cpp, TdfAbility_Sprint.cpp, TdfAbility_Test.cpp, TdfAnimInstance.cpp, TdfAttributeSet.cpp, TdfCharacterAbilities.cpp, TdfCharacterBase.cpp, TdfDeployables.cpp, TdfDJDog.cpp, TdfEscapeZone.cpp, TdfFibreBox.cpp, TdfGameInstance.cpp, TdfGameMode.cpp, TdfGameplayAbility.cpp, TdfGameState.cpp, TdfGenerator.cpp, TdfGE_Damage.cpp, TdfGE_KealthDamage.cpp, TdfGE_SpeedBoost.cpp, TdfHouseActors.cpp, TdfHUD.cpp, TdfKillerCharacter.cpp, TdfKillers.cpp, TdfMapBuilder.cpp, TdfPlayerController.cpp, TdfRunnerCharacter.cpp, TdfRunners.cpp, TdfShrine.cpp, TdfTargetDummy.cpp, TheDheerFather.cpp
+TheDheerFather Win64 Development:
+  Using ISPC compiler (D:\Program Files 2\UE_5.8\Engine\Source\ThirdParty\Intel\ISPC\bin\Windows\ispc.exe)
+    Intel(r) Implicit SPMD Program Compiler (Intel(r) ISPC), 1.24.0 (build commit  @ 20250404, LLVM 18.1.2)
+  Using Visual Studio 14.51.36248 toolchain (D:\VisualStudio\VC\Tools\MSVC\14.51.36231) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Warning: Visual Studio compiler 14.51.36248 is not a preferred version
+  [Adaptive Build] Excluded from TheDheerFather unity file: TdfAbilitySystemComponent.cpp, TdfAbility_GroundSmash.cpp, TdfAbility_Melee.cpp, TdfAbility_Sprint.cpp, TdfAbility_Test.cpp, TdfAnimInstance.cpp, TdfAttributeSet.cpp, TdfCharacterAbilities.cpp, TdfCharacterBase.cpp, TdfDeployables.cpp, TdfDJDog.cpp, TdfEscapeZone.cpp, TdfFibreBox.cpp, TdfGameInstance.cpp, TdfGameMode.cpp, TdfGameplayAbility.cpp, TdfGameState.cpp, TdfGenerator.cpp, TdfGE_Damage.cpp, TdfGE_KealthDamage.cpp, TdfGE_SpeedBoost.cpp, TdfHouseActors.cpp, TdfHUD.cpp, TdfKillerCharacter.cpp, TdfKillers.cpp, TdfMapBuilder.cpp, TdfPlayerController.cpp, TdfRunnerCharacter.cpp, TdfRunners.cpp, TdfShrine.cpp, TdfTargetDummy.cpp, TheDheerFather.cpp
+=================================
+Using Unreal Build Accelerator local executor to run 43 action(s)
+  CPU 8 physical cores, 8 logical cores
+  Memory 15.93 GB physical, 17.3 GB/35.93 GB committed
+  UBA Storage capacity 40 GB
+** For TheDheerFather-Win64-Development **
+[1/43] Copy TheDheerFather-Default.rc2
+[2/43] Copy D3D12Core.dll
+[3/43] Copy d3d12SDKLayers.dll
+[4/43] Copy tbb12.dll
+[5/43] Copy tbbmalloc.dll
+[6/43] Copy DirectML.dll
+[7/43] Compile Resource [x64] TheDheerFather-Default.rc2
+[8/43] Compile [x64] SharedPCH.Engine.Project.ValApi.ValExpApi.Cpp20.cpp
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\CoreUObject\Public\UObject\Class.h(4314,31): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	COREUOBJECT_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                             ^
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\BlueprintGeneratedClass.h(590,42): warning C4996: 'UObjectBaseUtility::GetVersePath': This API is internal to the engine. As such, there is no guarantee that it won't change or be removed in future releases. Please use at your own risk.
+	ENGINE_API virtual UE::Core::FVersePath GetVersePath() const override;
+	                                        ^
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Public\Animation\AnimCompressionTypes.h(518,26): warning C4996: 'ICompressedAnimData::SerializeCompressedData': SerializeCompressedData now accepts the DataOwner as an argument - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void SerializeCompressedData(class FArchive& Ar) override;
+	                        ^
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\Curves\CurveFloat.h(48,53): warning C4996: 'UCurveBase::GetCurves': Use version taking a TAdderReserverRef - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual TArray<FRichCurveEditInfoConst> GetCurves() const override;
+	                                                   ^
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Public\Subsystems\WorldSubsystem.h(90,26): warning C4996: 'FTickableObjectBase::IsAllowedToTick': Use IsTickable for conditional ticks and SetTickableTickType to change the tick type after initial registration - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual bool IsAllowedToTick() const override final;
+	                        ^
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\Components\SkeletalMeshComponent.h(2190,15): warning C4996: 'USkinnedMeshComponent::UpdateSlaveComponent': This method has been deprecated. Please use UpdateFollowerComponent instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void UpdateSlaveComponent() override { UpdateFollowerComponent(); };
+	             ^
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\Components\SkeletalMeshComponent.h(2198,26): warning C4996: 'USkinnedMeshComponent::SetSkeletalMesh': Use USkeletalMeshComponent::SetSkeletalMesh() or SetSkinnedAssetAndUpdate() instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void SetSkeletalMesh(class USkeletalMesh* NewMesh, bool bReinitPose = true) override;  // SetSkeletalMesh may remain and become a UFUNCTION but lose its virtual after it is removed from the SkinnedMeshComponent API
+	                        ^
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\EdGraph\EdGraphSchema.h(631,26): warning C4996: 'FGraphActionListBuilderBase::AddAction': Overriding the schema action category is no longer supported, set the category via CosmeticUpdateRootCategory or CosmeticUpdateCategory - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void AddAction(const TSharedPtr<FEdGraphSchemaAction>& NewAction, FString const& Category) override;
+	                        ^
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\EdGraph\EdGraphSchema.h(633,26): warning C4996: 'FGraphActionListBuilderBase::AddActionList': Collections of Action lists were ambiguous and unused - make a compound FEdGraphSchemaAction and Add it - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void AddActionList(const TArray<TSharedPtr<FEdGraphSchemaAction> >& NewActions, FString const& Category = FString()) override;
+	                        ^
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\ChildConnection.h(75,16): warning C4996: 'UNetConnection::IsNetReady': Replaced with a version that doesn't have a saturate option. Call Saturate() directly if passing true before. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual int32 IsNetReady(bool Saturate) override
+	              ^
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\SkeletalMesh.h(2606,26): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                        ^
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\SkeletalMesh.h(3015,57): warning C4996: 'USkinnedAsset::GetLODInfoArray': Use GetLODInfo and GetLODNum instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual const TArray<FSkeletalMeshLODInfo>& GetLODInfoArray() const override;
+	                                                       ^
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\SkeletalMesh.h(3009,51): warning C4996: 'USkinnedAsset::GetLODInfoArray': Use GetLODInfo and GetLODNum instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual TArray<FSkeletalMeshLODInfo>& GetLODInfoArray() override;
+	                                                 ^
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\StaticMesh.h(2005,26): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                        ^
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\Engine\Texture2D.h(125,15): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	             ^
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\Sound\SoundWave.h(1189,26): warning C4996: 'UObject::GetAssetRegistryTags': Implement the version that takes FAssetRegistryTagsContext instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	ENGINE_API virtual void GetAssetRegistryTags(TArray<FAssetRegistryTag>& OutTags) const override;
+	                        ^
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos\Box.h(104,17): warning C4996: 'Chaos::FImplicitObject::GetRadius': Please use GetRadiusf instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+		virtual FReal GetRadius() const override
+		              ^
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos\Box.h(104,17): note: the template instantiation context (the oldest one first) is
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos\GeometryParticles.h(151,8): note: while compiling class template 'Chaos::TGeometryParticlesImp'
+	class TGeometryParticlesImp : public TSimpleGeometryParticles<T, d>
+	      ^
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos\GeometryParticles.h(588,21): note: see reference to class template instantiation 'Chaos::TBox<Chaos::FReal,3>' being compiled
+				TBox<FReal, 3>::SerializeAsAABBs(Ar, MLocalBounds);
+				                ^
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos\ImplicitObjectTransformed.h(174,16): warning C4996: 'Chaos::FImplicitObject::GetMargin': Please use GetMarginf instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual FReal GetMargin() const override
+	              ^
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos\ImplicitObjectTransformed.h(174,16): note: the template instantiation context (the oldest one first) is
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos\ImplicitObjectTransformed.h(458,61): note: see reference to class template instantiation 'Chaos::TImplicitObjectTransformed<Chaos::FReal,3,true>' being compiled
+			TImplicitObjectTransformed<FReal, 3>* InnerTransformed = static_cast<TImplicitObjectTransformed<FReal, 3>*>(NewTransformed.GetReference());
+			                                                         ^
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Experimental\Chaos\Public\Chaos\ImplicitObjectTransformed.h(180,16): warning C4996: 'Chaos::FImplicitObject::GetRadius': Please use GetRadiusf instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual FReal GetRadius() const override
+	              ^
+[9/43] Compile [x64] TdfAbilitySystemComponent.cpp
+[10/43] Compile [x64] TdfAbility_GroundSmash.cpp
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[11/43] Compile [x64] Module.TheDheerFather.cpp
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[12/43] Compile [x64] TdfAbility_Sprint.cpp
+[13/43] Compile [x64] TdfAbility_Melee.cpp
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[14/43] Compile [x64] TdfAbility_Test.cpp
+[15/43] Compile [x64] TdfAnimInstance.cpp
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[16/43] Compile [x64] TdfAttributeSet.cpp
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[17/43] Compile [x64] TdfCharacterAbilities.cpp
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[18/43] Compile [x64] TdfCharacterBase.cpp
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[19/43] Compile [x64] TdfDJDog.cpp
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[20/43] Compile [x64] TdfDeployables.cpp
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[21/43] Compile [x64] TdfEscapeZone.cpp
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[22/43] Compile [x64] TdfFibreBox.cpp
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[23/43] Compile [x64] TdfGE_Damage.cpp
+[24/43] Compile [x64] TdfGE_KealthDamage.cpp
+[25/43] Compile [x64] TdfGE_SpeedBoost.cpp
+D:\NSA Unreal Engine\New Folder For Migration\Source\TheDheerFather\TdfGE_SpeedBoost.cpp(10,2): warning C4996: 'UGameplayEffect::StackingType': Stacking Type will be made private, Please use GetStackingType. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	StackingType = EGameplayEffectStackingType::AggregateByTarget;
+	^
+[26/43] Compile [x64] TdfGameInstance.cpp
+[27/43] Compile [x64] TdfGameMode.cpp
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[28/43] Compile [x64] TdfGameState.cpp
+[29/43] Compile [x64] TdfGameplayAbility.cpp
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[30/43] Compile [x64] TdfGenerator.cpp
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[31/43] Compile [x64] TdfHUD.cpp
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[32/43] Compile [x64] TdfHouseActors.cpp
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[33/43] Compile [x64] TdfKillerCharacter.cpp
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[34/43] Compile [x64] TdfKillers.cpp
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[35/43] Compile [x64] TdfMapBuilder.cpp
+[36/43] Compile [x64] TdfPlayerController.cpp
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[37/43] Compile [x64] TdfShrine.cpp
+[38/43] Compile [x64] TdfRunnerCharacter.cpp
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[39/43] Compile [x64] TdfRunners.cpp
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[40/43] Compile [x64] TheDheerFather.cpp
+[41/43] Compile [x64] TdfTargetDummy.cpp
+D:\Program Files 2\UE_5.8\Engine\Source\Runtime\Engine\Classes\GameFramework\Character.h(798,31): warning C4996: 'APawn::GetMovementBase': GetMovementBase is deprecated. Use GetMovementBaseObject or GetMovementBaseInterfaceData instead. - Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+	virtual UPrimitiveComponent* GetMovementBase() const override final { return Cast<UPrimitiveComponent>(GetMovementBaseObject()); }
+	                             ^
+[42/43] Link [x64] TheDheerFather.exe
+[43/43] WriteMetadata TheDheerFather.target [NoUba]
+
+Total time in Unreal Build Accelerator local executor: 131.99 seconds
+Output binary: D:\Program Files 2\UE_5.8\Engine\Binaries\Win64\UnrealEditor.exe
+Output binary: D:\NSA Unreal Engine\New Folder For Migration\Binaries\Win64\TheDheerFather.exe
+
+Result: Succeeded
+Total execution time: 135.83 seconds
+Trace written to file C:\Users\RedIce\AppData\Local\UnrealBuildTool\Trace.uba with size 26.7kb
+Took 136.19s to run dotnet.exe, ExitCode=0
+No build products were made
+Build command time: 136.23 s
+********** BUILD COMMAND COMPLETED **********
+********** COOK COMMAND STARTED **********
+Running UnrealEditor Cook for project D:\NSA Unreal Engine\New Folder For Migration\TheDheerFather.uproject
+Commandlet log file is D:\Program Files 2\UE_5.8\Engine\Programs\AutomationTool\Saved\Cook-2026.07.19-01.53.05.txt
+Running: D:\Program Files 2\UE_5.8\Engine\Binaries\Win64\UnrealEditor-Cmd.exe "D:\NSA Unreal Engine\New Folder For Migration\TheDheerFather.uproject" -run=Cook  -TargetPlatform=Windows  -unversioned -fileopenlog -abslog="D:\Program Files 2\UE_5.8\Engine\Programs\AutomationTool\Saved\Cook-2026.07.19-01.53.05.txt" -stdout -CrashForUAT -unattended -NoLogTimes
+LogInit: Display: Running engine for game: TheDheerFather
+LogCore: Display: Requested channels: 'cpu,gpu,frame,log,bookmark,screenshot,region'
+LogTrace: Display: Control listening on port 1985
+LogCsvProfiler: Display: Metadata set : platform="Windows"
+LogCsvProfiler: Display: Metadata set : config="Development"
+LogCsvProfiler: Display: Metadata set : buildversion="++UE5+Release-5.8-CL-55116800"
+LogCsvProfiler: Display: Metadata set : engineversion="5.8.0-55116800+++UE5+Release-5.8"
+LogCsvProfiler: Display: Metadata set : enginereleaseversion="5.8.0"
+LogCsvProfiler: Display: Metadata set : os="Windows 10 (22H2) [10.0.19045.6466] "
+LogCsvProfiler: Display: Metadata set : cpu="GenuineIntel|Intel(R) Core(TM) i7-9700K CPU @ 3.60GHz"
+LogCsvProfiler: Display: Metadata set : pgoenabled="0"
+LogCsvProfiler: Display: Metadata set : pgoprofilingenabled="0"
+LogCsvProfiler: Display: Metadata set : ltoenabled="0"
+LogCsvProfiler: Display: Metadata set : asan="0"
+LogCsvProfiler: Display: Metadata set : mergedmodules="0"
+LogCsvProfiler: Display: Metadata set : compacttset="0"
+LogCsvProfiler: Display: Metadata set : commandline="" "D:\NSA Unreal Engine\New Folder For Migration\TheDheerFather.uproject" -run=Cook -TargetPlatform=Windows -unversioned -fileopenlog -abslog="D:\Program Files 2\UE_5.8\Engine\Programs\AutomationTool\Saved\Cook-2026.07.19-01.53.05.txt" -stdout -CrashForUAT -unattended -NoLogTimes""
+LogCsvProfiler: Display: Metadata set : loginid="81df1cc6463a5c733336259e68ca3c0a"
+LogCsvProfiler: Display: Metadata set : llm="0"
+LogCsvProfiler: Display: Metadata set : zenstreaming="0"
+LogCsvProfiler: Display: Metadata set : systemresolution.resx="1280"
+LogCsvProfiler: Display: Metadata set : systemresolution.resy="720"
+LogConfig: Display: Loading Android ini files took 0.04 seconds
+LogConfig: Display: Loading Mac ini files took 0.04 seconds
+LogConfig: Display: Loading IOS ini files took 0.04 seconds
+LogConfig: Display: Loading TVOS ini files took 0.05 seconds
+LogAudio: Display: Audio Device Manager not initializing due to all audio being disabled. If this is not intentional, please check command line arguments for "-nosound".
+LogConfig: Display: Loading Linux ini files took 0.06 seconds
+LogAssetRegistry: Display: FindShardedCacheFiles: 1 via .ref, 0 via migration fallback, 1 total
+LogAssetRegistry: Display: CleanupOrphanedCacheFiles (PreLoad): 1 .ref files found, 1 referenced binaries
+LogAssetRegistry: Display: CleanupOrphanedCacheFiles: 1 total binaries, 1 referenced (kept), 0 old-style pre-migration (kept), 0 orphans deleted, 0 orphans locked (kept)
+LogAssetRegistry: Display: LoadCacheFiles: loading 1 cache files, memory-mapping=enabled
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -Mode=ValidatePlatforms -OutputSDKs  -AllPlatforms  -project="D:/NSA Unreal Engine/New Folder For Migration/TheDheerFather.uproject" -log="D:/NSA Unreal Engine/New Folder For Migration/Saved/Logs/AutoSDKInfo.txt" -verbose -timestamps
+LogConfig: Display: Loading VulkanPC ini files took 0.04 seconds
+LogConfig: Display: Loading Unix ini files took 0.05 seconds
+LogConfig: Display: Loading Windows ini files took 0.05 seconds
+LogConfig: Display: Loading VisionOS ini files took 0.04 seconds
+Log file: D:\NSA Unreal Engine\New Folder For Migration\Saved\Logs\AutoSDKInfo.txt
+LogAssetRegistry: Display: Asset registry cache read as 118.8 MiB from ../../../../../NSA Unreal Engine/New Folder For Migration/Intermediate/CachedAssetRegistry/CachedAssetRegistry_0_37BB4C7A48671E81399F0DA7DC3B7504.bin (memory-mapped=yes)
+##PlatformValidate: Win64 VALID 10.0.22621.0
+##PlatformValidate: Mac INVALID 26.1.1
+##PlatformValidate: IOS INVALID 26.1.1
+##PlatformValidate: Android INVALID r27c
+##PlatformValidate: Linux INVALID v26_clang-20.1.8-rockylinux8
+##PlatformValidate: LinuxArm64 INVALID <UNKNOWN>
+##PlatformValidate: TVOS INVALID 26.1.1
+##PlatformValidate: VisionOS INVALID <UNKNOWN>
+Unable to find required SDK version 'MainVersion' for platform LinuxArm64. Check your SDK.json files
+Unable to find required SDK version 'MainVersion' for platform VisionOS. Check your SDK.json files
+Trace written to file C:\Users\RedIce\AppData\Local\UnrealBuildTool\Trace.uba with size 321b
+LogAnalytics: Display: Provider StudioTelemetry.Provider.Log is disabled for this application
+LogAnalytics: Display: Provider StudioTelemetry.Provider.CSV is disabled for this application
+LogAnalytics: Display: Provider StudioTelemetry.Provider.Horde is disabled for this application
+LogAnalytics: Display: Provider StudioTelemetry.Provider.Log is disabled for this application
+LogAnalytics: Display: Provider StudioTelemetry.Provider.CSV is disabled for this application
+LogAnalytics: Display: Provider StudioTelemetry.Provider.Horde is disabled for this application
+RenderDocPlugin: Display: RenderDoc plugin will not be loaded. Use '-AttachRenderDoc' on the cmd line or enable 'renderdoc.AutoAttach' in the plugin settings.
+LogAsyncCompilation: Display: MemorySharingInfo: UsedMemory=320MiB, MaxMemoryAvailable=36797MiB
+LogStreaming: Display: AsyncLoading2 - Created: Async Loading Thread: false, Async Post Load: false, Multithreaded: false
+LogHAL: Display: Platform has ~ 16 GB [17109741568 / 17179869184 / 16], which maps to Larger [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+LogCsvProfiler: Display: Metadata set : extradevelopmentmemorymb="0"
+LogObj: Display: Attempting to load config data for Default__DownlinkBandwidthManagerConfig before the Class has been constructed/registered/linked (likely during module loading or early startup). This will result in the load silently failing and should be fixed.
+LogTextureFormatASTC: Display: ASTCEnc version 5.0.1 library loaded
+LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatASTC
+LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatDXT
+LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatETC2
+LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatIntelISPCTexComp
+LogTextureFormatOodle: Display: Oodle Texture TFO init; latest sdk version = 2.9.16
+LogTextureFormatOodle: Display: Oodle Texture loading DLL: oo2tex_win64_2.9.16.dll
+LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatOodle
+LogTextureFormatManager: Display: Loaded Base TextureFormat: TextureFormatUncompressed
+LogTargetPlatformManager: Display: Failed to SetupSDK for platform 'Android'
+LogTargetPlatformManager: Display: Failed to SetupSDK for platform 'IOS'
+LogTargetPlatformManager: Display: Failed to SetupSDK for platform 'Linux'
+LogTargetPlatformManager: Display: Failed to SetupSDK for platform 'Mac'
+LogTargetPlatformManager: Display: Failed to SetupSDK for platform 'TVOS'
+LogTargetPlatformManager: Display: Loaded TargetPlatform 'Windows'
+LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsEditor'
+LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsServer'
+LogTargetPlatformManager: Display: Loaded TargetPlatform 'WindowsClient'
+LogTargetPlatformManager: Display: Building Assets For Windows
+LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+LogObj: Display: Attempting to load config data for Default__SlateThemeManager before the Class has been constructed/registered/linked (likely during module loading or early startup). This will result in the load silently failing and should be fixed.
+LogCsvProfiler: Display: Metadata set : verbatimrhiname="Null"
+LogCsvProfiler: Display: Metadata set : rhiname="Null"
+LogCsvProfiler: Display: Metadata set : rhifeaturelevel="SM6"
+LogCsvProfiler: Display: Metadata set : shaderplatform="PCD3D_SM6"
+LogCsvProfiler: Display: Metadata set : gpu=""
+LogCsvProfiler: Display: Metadata set : gpudriver=""
+LogDerivedDataCache: Display: ../../../Engine/DerivedDataCache/Compressed.ddp: Opened pak cache for reading. (1667 MiB)
+LogZenServiceInstance: Display: Launching zen utility 'D:/Program Files 2/UE_5.8/Engine/Binaries/Win64/zen.exe service status'.
+LogZenServiceInstance: Display: Writing plugin version info to 'C:/Users/RedIce/AppData/Local/UnrealEngine/Common/Zen/Install/zen_plugin_versions.json'
+LogZenServiceInstance: Display: Read zen version cache file from 'C:/Users/RedIce/AppData/Local/UnrealEngine/5.8/Saved/Zen/zen.version', version: '5.8.13-202605190912-windows-x64-release-094f62c2'
+LogZenServiceInstance: Display: Read zen version cache file from 'C:/Users/RedIce/AppData/Local/UnrealEngine/Common/Zen/Install/zen.version', version: '5.8.13-202605190912-windows-x64-release-094f62c2'
+LogZenServiceInstance: Display: Installed service at 'C:/Users/RedIce/AppData/Local/UnrealEngine/Common/Zen/Install/zenserver.exe' is up to date
+LogZenServiceInstance: Display: Launching executable 'C:/Users/RedIce/AppData/Local/UnrealEngine/Common/Zen/Install/zenserver.exe', working dir 'C:/Users/RedIce/AppData/Local/UnrealEngine/Common/Zen/Install', data dir 'C:/Users/RedIce/AppData/Local/UnrealEngine/Common/Zen/Data', args '--port 8558 --data-dir C:\Users\RedIce\AppData\Local\UnrealEngine\Common\Zen\Data --http asio --gc-cache-duration-seconds 1209600 --gc-interval-seconds 21600 --gc-low-diskspace-threshold 2147483648 --cache-bucket-limit-overwrites --quiet --restrict-content-types --allow-external-oidctoken-exe=false --plugins-config "C:/Users/RedIce/AppData/Local/UnrealEngine/Common/Zen/Install/zen_plugins_v1.json" --security-config-path "C:/Users/RedIce/AppData/Local/UnrealEngine/Common/Zen/Install/security-config.json" --owner-pid 10952  --child-id Zen_10952_Startup'
+LogZenServiceInstance: Display: Unreal Zen Storage Server HTTP service at http://[::1]:8558 status: OK!.
+LogDerivedDataCache: Display: ZenLocal: Using ZenServer HTTP service at [::1] with namespace ue.ddc. Status: OK!.
+LogDerivedDataCache: Display: C:/Users/RedIce/AppData/Local/UnrealEngine/Common/DerivedDataCache: Performance: Latency=0.10ms. RandomReadSpeed=100.33MBs, RandomWriteSpeed=111.16MBs. Assigned SpeedClass 'Local'
+LogUbaHorde: Display: UBA/Horde Configuration [Uba.Provider.Horde]: Not Enabled
+LogShaderCompilers: Display: No distributed shader compiler controller found
+LogShaderCompilers: Display: Using 5 local workers for shader compilation
+LogShaderCompilers: Display: Compiling shader autogen file: ../../../../../NSA Unreal Engine/New Folder For Migration/Intermediate/ShaderAutogen/PCD3D_SM6/AutogenShaderHeaders.ush
+LogShaderCompilers: Display: Autogen file is unchanged, skipping write.
+LogEditorDomain: Display: EditorDomain is Disabled
+LogAssetRegistry: Display: AssetDataGatherer spent 0.000s loading caches from ../../../../../NSA Unreal Engine/New Folder For Migration/Intermediate/CachedAssetRegistry.
+LogDeviceProfileManager: Display: Deviceprofile LinuxArm64Editor not found.
+LogDeviceProfileManager: Display: Deviceprofile LinuxArm64 not found.
+LogCsvProfiler: Display: Metadata set : deviceprofile="WindowsEditor"
+LogStreaming: Display: FlushAsyncLoading(1): 1 QueuedPackages, 0 AsyncPackages
+LogTextureEncodingSettings: Display: Texture Encode Speed: Final (cook).
+LogTextureEncodingSettings: Display: Oodle Texture Encode Speed settings: Fast: RDO Off Lambda=0, Effort=Normal Final: RDO Off Lambda=0, Effort=Normal
+LogTextureEncodingSettings: Display: Shared linear texture encoding: Disabled
+LogMeshReduction: Display: Using QuadricMeshReduction for automatic static mesh reduction
+LogMeshReduction: Display: Using SkeletalMeshReduction for automatic skeletal mesh reduction
+LogMeshReduction: Display: Using ProxyLODMeshReduction for automatic mesh merging
+LogMeshReduction: Display: No distributed automatic mesh merging module available
+LogShaderCompilers: Display: Compiling shader autogen file: ../../../../../NSA Unreal Engine/New Folder For Migration/Intermediate/ShaderAutogen/PCD3D_SM5/AutogenShaderHeaders.ush
+LogShaderCompilers: Display: Autogen file is unchanged, skipping write.
+LogVirtualization: Display: VirtualizationSystem name found in ini file: None
+LogVirtualization: Display: FNullVirtualizationSystem mounted, virtualization will be disabled
+LogWorldPartition: Display: FWorldPartitionClassDescRegistry::Initialize started...
+LogWorldPartition: Display: FWorldPartitionClassDescRegistry::Initialize took 17.059 ms
+LogMetaSound: Display: MetaSound Page Target Initialized to 'Default'
+LogAudio: Display: Registering Engine Module Parameter Interfaces...
+LogAbilitySystem: Warning: No GameplayCueNotifyPaths were specified in DefaultGame.ini under [/Script/GameplayAbilities.AbilitySystemGlobals]. Falling back to using all of /Game/. This may be slow on large projects. Consider specifying which paths are to be searched.
+LogAbilitySystem: Display: Processing InitializeRuntimeObjectLibrary.
+LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+LogAudioCaptureCore: Display: No Audio Capture implementations found. Audio input will be silent.
+LogToolsetRegistry: Display: Registering Toolset ToolsetRegistry.AgentSkillToolset
+LogCsvProfiler: Display: Metadata set : largeworldcoordinates="1"
+LogCsvProfiler: Display: Metadata set : raytracing="0"
+LogCook: Display: CookProcessCount=1. CookMultiprocess is disabled and the cooker is running as a single process.
+LogCook: Display: CookSettings for Memory:
+	MemoryMaxUsedVirtual 0MiB
+	MemoryMaxUsedPhysical 0MiB
+	MemoryMinFreeVirtual 2048MiB
+	MemoryMinFreePhysical 2048MiB
+	MemoryTriggerGCAtPressureLevel None
+	SoftGCMemoryUseTrigger disabled
+	SoftGCTimeBudgetTrigger enabled (0.05 budget, 30s min period)
+LogCook: Display: SkipOnlyEditorOnly is enabled, unsolicited packages will not be cooked unless they are referenced from the cooked version of the instigator package.
+LogCook: Display: ---- Pre Content Initialisation: End ----
+LogCook: Display: ---- Post Content Initialisation: Start ----
+LogEditorDomain: Display: Cycle detected in parents of class /Script/RigVMDeveloper.RigVMUnitNode. Allow flags for editordomain and incremental cooking will be invalid.
+LogZenStore: Display: Establishing oplog 'TheDheerFather.98263f62/EditorDomain'
+LogZenStore: Display: Zen project 'TheDheerFather.98263f62' created
+LogZenStore: Display: Zen oplog 'TheDheerFather.98263f62/EditorDomain' created
+LogCook: Display: Waiting for Asset Registry
+LogAssetRegistry: Display: Starting OnFilesLoaded.Broadcast
+LogAssetRegistry: Display: Completed OnFilesLoaded.Broadcast: 0.022s
+LogAssetRegistry: Display: Asset registry cache written as 118.8 MiB to ../../../../../NSA Unreal Engine/New Folder For Migration/Intermediate/CachedAssetRegistry/CachedAssetRegistry_*.ref
+LogAssetRegistry: Display: CleanupOrphanedCacheFiles (PostWrite): 1 .ref files found, 1 referenced binaries
+LogAssetRegistry: Display:   CachedAssetRegistry_0_37BB4C7A48671E81399F0DA7DC3B7504.bin: delete failed (orphaned but still in use)
+LogAssetRegistry: Display: CleanupOrphanedCacheFiles: 2 total binaries, 1 referenced (kept), 0 old-style pre-migration (kept), 0 orphans deleted, 1 orphans locked (kept)
+LogAssetRegistry: Display: CleanupOrphanedCacheFiles (PostWrite): 1 .ref files found, 1 referenced binaries
+LogAssetRegistry: Display:   CachedAssetRegistry_0_37BB4C7A48671E81399F0DA7DC3B7504.bin: delete failed (orphaned but still in use)
+LogAssetRegistry: Display: CleanupOrphanedCacheFiles: 2 total binaries, 1 referenced (kept), 0 old-style pre-migration (kept), 0 orphans deleted, 1 orphans locked (kept)
+LogCook: Display: INCREMENTAL COOK DEPENDENCIES: Enabled. Incremental Cook Dependencies are enabled in Editor.ini:[CookSettings]:LegacyIterative=false.
+LogZenStore: Display: Establishing oplog 'TheDheerFather.98263f62/Windows'
+LogZenStore: Display: Zen project 'TheDheerFather.98263f62' already exists
+LogStorageServerPlatformFile: Display: Found 'D:/NSA Unreal Engine/New Folder For Migration/Saved/Cooked/Windows/ue.projectstore'
+LogStorageServerPlatformFile: Display: Using connection settings from ue.projectstore: HostAddrs='[::1]+192.168.56.1+192.168.0.16' and HostPort='8558'
+LogStorageServerPlatformFile: Display: Found 'D:/NSA Unreal Engine/New Folder For Migration/Saved/Cooked/Windows/ue.projectstore'
+LogStorageServerPlatformFile: Display: Using password authentication from ue.projectstore
+LogStorageServerPlatformFile: Display: Using settings from ue.projectstore: ServerProject='TheDheerFather.98263f62' and ServerPlatform='Windows'
+LogStorageServerConnection: Display: Creating zen store connection to [::1]:8558 ("::1").
+LogStorageServerConnection: Display: Storage server returned HTTP 404 for /prj/TheDheerFather.98263f62/oplog/Windows: oplog Windows not found in project TheDheerFather.98263f62
+LogStorageServerConnection: Display: Creating zen store connection to 192.168.56.1:8558 ("192.168.56.1").
+LogStorageServerConnection: Display: Storage server returned HTTP 404 for /prj/TheDheerFather.98263f62/oplog/Windows: oplog Windows not found in project TheDheerFather.98263f62
+LogStorageServerConnection: Display: Creating zen store connection to 192.168.0.16:8558 ("192.168.0.16").
+LogStorageServerConnection: Display: Storage server returned HTTP 404 for /prj/TheDheerFather.98263f62/oplog/Windows: oplog Windows not found in project TheDheerFather.98263f62
+LogStorageServerConnection: Display: Creating zen store connection to hostname://DESKTOP-4E6BB46:8558 ("10.2.0.2").
+LogStorageServerConnection: Display: Storage server returned HTTP 404 for /prj/TheDheerFather.98263f62/oplog/Windows: oplog Windows not found in project TheDheerFather.98263f62
+LogStorageServerPlatformFile: Display: Failed to initialize connection to any of [ [::1], 192.168.56.1, 192.168.0.16, hostname://DESKTOP-4E6BB46 ]
+LogCook: Display: CalculateGlobalDependenciesHash(Windows):
+LogCook: Display: 	FGuid CookIncrementalVersion = ffa12fdc-c822-1fe2-7757-627a12f1d3a7
+LogCook: Display: 	[Editor]:CookSettings.ProjectCookIncrementalVersion = 00000000-0000-0000-0000-000000000000
+LogCook: Display: 	[Engine]:Core.System.CanStripEditorOnlyExportsAndImports = True
+LogCook: Display: 	[Engine]:Core.System.CanSkipEditorReferencedPackagesWhenCooking = False
+LogCook: Display: 	CanUseUnversionedPropertySerialization = True
+LogCook: Display: 	[Editor]:CookSettings.AutomaticOptionalInclusionAssetType = /Script/Niagara.NiagaraScript, /Script/Niagara.NiagaraEmitter, /Script/Niagara.NiagaraSystem, /Script/NiagaraEditor.NiagaraParameterDefinitions, /Script/Niagara.NiagaraEffectType, /Script/Niagara.NiagaraValidationRuleSet, /Script/OptimusCore.OptimusDeformer
+LogCook: Display: 	IsCookFlagSet(ECookInitializationFlags::Unversioned) = True
+LogCook: Display: 	FCoreRedirects::AppendHashOfGlobalRedirects = 4628a73979b5807a7df2c30e3569e387562ac9ef3eeffbdc79d1b1e9658a3bdc
+LogCook: Display: 	GlobalDependenciesHash(Windows) = 659d861afcb9b60e9000b513ff7a40f8737689c6dd7cff988b7fe71be46841f9
+LogCook: Display: FULL COOK: Incremental Cooks are disabled by default in Editor.ini:[CookSettings]:CookIncrementalDefaultIncremental=false, and commandline did not specify -forcerecook=false. Deleting previously cooked packages for platform Windows and recooking all packages discovered in the current cook.
+LogZenStore: Display: Deleting oplog 'TheDheerFather.98263f62/Windows' if it exists
+LogZenStoreWriter: Display: Deleting D:/NSA Unreal Engine/New Folder For Migration/Saved/Cooked/Windows/...
+LogZenStore: Display: Zen oplog 'TheDheerFather.98263f62/Windows' created
+LogCook: Display: Sandbox cleanup took 0.020 seconds for platforms Windows
+LogCook: Display: Compiling global changed shaders for platform 'Windows'
+LogShaderLibrary: Display:
+LogShaderLibrary: Display: Shader Library 'Global' (PCD3D_SM5-PCD3D_SM5) Stats:
+LogShaderLibrary: Display: =================
+LogShaderLibrary: Display: Assets: 1, Unique Shadermaps: 345 (34500.00%)
+LogShaderLibrary: Display: Total Shaders: 3940, Unique Shaders: 3926 (99.64%)
+LogShaderLibrary: Display: Total Shader Size: 11.61mb, Unique Shaders Size: 11.61mb (99.96%)
+LogShaderLibrary: Display: === Extended info:
+LogShaderLibrary: Display: Minimum number of shaders in shadermap: 1
+LogShaderLibrary: Display: Median number of shaders in shadermap: 3
+LogShaderLibrary: Display: Maximum number of shaders in shadermap: 309
+LogShaderLibrary: Display: Number of shadermaps referencing top 10 most shared shaders:
+LogShaderLibrary: Display:     3, 3, 3, 2, 2, 2, 2, 2, 2, 2
+LogShaderLibrary: Display: Unique shaders itemization (sorted by compressed size):
+LogShaderLibrary: Display: SF_Pixel: 1751 shaders (44.60%), compressed size: 6.68 MB (3.91 KB avg per shader), uncompressed size: 31.68 MB (18.53 KB avg per shader)
+LogShaderLibrary: Display: SF_Compute: 2058 shaders (52.42%), compressed size: 4.85 MB (2.41 KB avg per shader), uncompressed size: 19.56 MB (9.73 KB avg per shader)
+LogShaderLibrary: Display: SF_Vertex: 115 shaders (2.93%), compressed size: 0.07 MB (0.61 KB avg per shader), uncompressed size: 0.15 MB (1.31 KB avg per shader)
+LogShaderLibrary: Display: SF_Geometry: 2 shaders (0.05%), compressed size: 0.00 MB (0.49 KB avg per shader), uncompressed size: 0.00 MB (1.55 KB avg per shader)
+LogShaderLibrary: Display: Textual dump saved to '../../../../../NSA Unreal Engine/New Folder For Migration/Saved/Shaders/PCD3D_SM5-PCD3D_SM5/ShaderDebug-Global-PCD3D_SM5-PCD3D_SM5/Dump.txt'
+LogShaderLibrary: Display: =================
+LogCook: Display: Discovering localized assets for cultures: en
+LogCook: Display: Found 0 localized assets
+LogCook: Display: ---- Post Content Initialisation: End ----
+LogCook: Display: Cooked packages 0 Packages Remain 450 Total 450
+LogCook: Display: Cook Diagnostics: OpenFileHandles=274, VirtualMemory=1444MiB, VirtualMemoryAvailable=19535MiB
+LogMaterial: Display: Missing cached shadermap for /SpeedTreeImporter/SpeedTree9/SpeedTreeMaster.SpeedTreeMaster in PCD3D_SM5, Default, SM5, Game (DDC key hash: d23a31d709360aa7c77dd58363ac52a7721e55fe), compiling.
+LogMaterial: Display: Missing cached shadermap for /SpeedTreeImporter/SpeedTree9/SpeedTreeBillboardMaster.SpeedTreeBillboardMaster in PCD3D_SM5, Default, SM5, Game (DDC key hash: 6ef7a196f064bf9079310f51ffaf7c3c080b4a34), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineMaterials/Widget3DPassThrough_Translucent_OneSided.Widget3DPassThrough_Translucent_OneSided in PCD3D_SM5, Default, SM5, Game (DDC key hash: 17bc657c9b779bccbdb26dfefdab90ab6922d973), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineMaterials/Widget3DPassThrough_Opaque_OneSided.Widget3DPassThrough_Opaque_OneSided in PCD3D_SM5, Default, SM5, Game (DDC key hash: 7535b501cf0b68b4503f5a09dad5663b4948d7c9), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineMaterials/Widget3DPassThrough_Masked_OneSided.Widget3DPassThrough_Masked_OneSided in PCD3D_SM5, Default, SM5, Game (DDC key hash: 863b4d9b792bc05abc5f6cfa2b73ddcc013191e5), compiling.
+LogCook: Display: Garbage collection triggered (Soft). Triggered by conditions:
+  CookSettings.SoftGCTimeTrigger: Periodic triggering of SoftGC: No duration data.
+LogCookCommandlet: Display: GarbageCollection... (Periodic GC)
+LogMaterial: Display: Missing cached shadermap for /Landmass/Landscape/BlueprintBrushes/Materials/Internal/BrushBounds.BrushBounds in PCD3D_SM5, Default, SM5, Game (DDC key hash: e1fdbc585cc42449da62e7875fccdf22ca7f7c7c), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/M_ClearCoat.M_ClearCoat in PCD3D_SM5, Default, SM5, Game (DDC key hash: c652b7fdafb76453ff9530ac6670b03a4e2891c5), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/MaterialInstances/MI_ClearCoat_Mask.MI_ClearCoat_Mask in PCD3D_SM5, Default, SM5, Game (DDC key hash: d290a1ae62953545467613c1ea88e723848e4c57), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/MaterialInstances/MI_Default_Blend.MI_Default_Blend in PCD3D_SM5, Default, SM5, Game (DDC key hash: 42ef492abf3b4668d2d9ec2ca2f560f08d280296), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/MaterialInstances/MI_Default_Mask.MI_Default_Mask in PCD3D_SM5, Default, SM5, Game (DDC key hash: 8d344d2be17070d2859ca96abd008e988addf7c1), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/M_Default.M_Default in PCD3D_SM5, Default, SM5, Game (DDC key hash: b45db0efd236c70693e125ad3e158a69ad870e0e), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EditorLandscapeResources/LandscapeLayerUsageMaterial.LandscapeLayerUsageMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: e629de8e2609dea01888ded936c10e40137ec8c1), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/MaterialInstances/MI_Default_Blend_DS.MI_Default_Blend_DS in PCD3D_SM5, Default, SM5, Game (DDC key hash: 3286320ad6c3e166a8be1514c9110484f025cf2c), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/MaterialInstances/MI_Default_Mask_DS.MI_Default_Mask_DS in PCD3D_SM5, Default, SM5, Game (DDC key hash: 5f432d8d7a1ec38229bec33dfa44e5fc7343ad3b), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/MaterialInstances/MI_Default_Opaque_DS.MI_Default_Opaque_DS in PCD3D_SM5, Default, SM5, Game (DDC key hash: 478555778b3d9efc308302dc58c76c1a49cfd4d8), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/MaterialInstances/MI_Transmission_DS.MI_Transmission_DS in PCD3D_SM5, Default, SM5, Game (DDC key hash: 7003fee2245858b6fe3f736f4717e1ee863798c5), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/M_Transmission.M_Transmission in PCD3D_SM5, Default, SM5, Game (DDC key hash: 295088931ed929b40ef375321c7fabdb2a691516), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/MaterialInstances/MI_SpecularGlossiness_Mask_DS.MI_SpecularGlossiness_Mask_DS in PCD3D_SM5, Default, SM5, Game (DDC key hash: 1dc0e690261ecbba04d6d2c120b12696fd39da40), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/MaterialInstances/MI_SpecularGlossiness_Opaque_DS.MI_SpecularGlossiness_Opaque_DS in PCD3D_SM5, Default, SM5, Game (DDC key hash: df566729e01455a77fe9ea708124d0cfb1e107dd), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/MaterialInstances/MI_SpecularGlossiness_Blend.MI_SpecularGlossiness_Blend in PCD3D_SM5, Default, SM5, Game (DDC key hash: 6853965873250cf2ffdf5e38fdfdbbb105a9c141), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/MaterialInstances/MI_SpecularGlossiness_Mask.MI_SpecularGlossiness_Mask in PCD3D_SM5, Default, SM5, Game (DDC key hash: 914ba89056b3f42aed4ca437d822b00a34f96390), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/M_SpecularGlossiness.M_SpecularGlossiness in PCD3D_SM5, Default, SM5, Game (DDC key hash: f9050928013aba1381485c77da6b617457cb4ac6), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EditorMaterials/Dataflow/DataflowSelection.DataflowSelection in PCD3D_SM5, Default, SM5, Game (DDC key hash: 732ae6b1fb3445bb3b026a2d4911352ca68f1b41), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineMaterials/Widget3DPassThrough_Translucent.Widget3DPassThrough_Translucent in PCD3D_SM5, Default, SM5, Game (DDC key hash: b7953e6001092a8315d2ee0a59a2537258b5d2d1), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineMaterials/Widget3DPassThrough_Opaque.Widget3DPassThrough_Opaque in PCD3D_SM5, Default, SM5, Game (DDC key hash: 5fc27124b7e6bf92071a0d81c30a9b9132259928), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineMaterials/Widget3DPassThrough_Masked.Widget3DPassThrough_Masked in PCD3D_SM5, Default, SM5, Game (DDC key hash: 1962e1a858ea7a0dbcafef8d2991bfb92291cd5f), compiling.
+LogMaterial: Display: Missing cached shadermap for /Landmass/Landscape/BlueprintBrushes/Materials/Sprite/M_BrushSprite_01.M_BrushSprite_01 in PCD3D_SM5, Default, SM5, Game (DDC key hash: f313657579a2af9d1fe8c6a991040e98e98e2cd0), compiling.
+LogMaterial: Display: Missing cached shadermap for /MeshModelingToolsetExp/Materials/PointSetOverlaidComponentMaterial.PointSetOverlaidComponentMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: eb50ffc1192b092a500d7e0e75ee1e8085aa82a9), compiling.
+LogMaterial: Display: Missing cached shadermap for /MeshModelingToolsetExp/Materials/LineSetOverlaidComponentMaterial.LineSetOverlaidComponentMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: e1e4a1fc68160dfa6aa01b231c79bca892f2991b), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EditorLandscapeResources/MaskBrushMaterial_MaskedRegion.MaskBrushMaterial_MaskedRegion in PCD3D_SM5, Default, SM5, Game (DDC key hash: d4e6b10c43b154a38c9832021cf214a2847c7791), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/VREditor/SnapGrid/SnapGridMaterial.SnapGridMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: 9a7c1a56fedbb00a4938b07bef97c547622caf1b), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineMaterials/DefaultMaterial.DefaultMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: 99eb8a335da865fa9d9a2331227aa3f8ea93c7b6), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineMaterials/DefaultDeferredDecalMaterial.DefaultDeferredDecalMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: a5d7101635ae980fc795b92ad538d762773ea468), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineMaterials/DefaultPostProcessMaterial.DefaultPostProcessMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: 79da0b6aa3f13c18b6353178372af71fd297f7a7), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineDebugMaterials/M_VolumeRenderSphereTracePP.M_VolumeRenderSphereTracePP in PCD3D_SM5, Default, SM5, Game (DDC key hash: 105a528de69dcebd1f22b62468fc6fc6a21d248e), compiling.
+LogMaterial: Display: Missing cached shadermap for /HairStrands/Materials/HairDebugMaterial.HairDebugMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: 8ab3729c9d3101bb80ad4ae32f4da53bf0cb881d), compiling.
+LogMaterial: Display: Missing cached shadermap for /Paper2D/OpaqueUnlitSpriteMaterial.OpaqueUnlitSpriteMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: b4a6c62d408926bea4718c84ea54d14957c87faa), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EditorLandscapeResources/SelectBrushMaterial_SelectedRegion.SelectBrushMaterial_SelectedRegion in PCD3D_SM5, Default, SM5, Game (DDC key hash: f89dec917b13b4bbbfe8b46280899ead91960d11), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineMaterials/DefaultTextMaterialOpaque.DefaultTextMaterialOpaque in PCD3D_SM5, Default, SM5, Game (DDC key hash: 8437f85f15b1e28e0abc58159d63832db7e3a2c6), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineMaterials/WorldGridMaterial.WorldGridMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: 08309082196c49aa6112f6c61a2785b0bf985b86), compiling. Is special engine material.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/MaterialInstances/MI_ClearCoat_Blend_DS.MI_ClearCoat_Blend_DS in PCD3D_SM5, Default, SM5, Game (DDC key hash: c9a3e15439f1228370010b1b0c733db904c502d2), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/MaterialInstances/MI_ClearCoat_Mask_DS.MI_ClearCoat_Mask_DS in PCD3D_SM5, Default, SM5, Game (DDC key hash: 4b8cbb729090d6a5e6dac8c2df939b907fd6cf8d), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/MaterialInstances/MI_ClearCoat_Opaque_DS.MI_ClearCoat_Opaque_DS in PCD3D_SM5, Default, SM5, Game (DDC key hash: 7a016bb27db682bd17babff56095c93124e4e894), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/MaterialInstances/MI_ClearCoat_Blend.MI_ClearCoat_Blend in PCD3D_SM5, Default, SM5, Game (DDC key hash: c126341b6c2ed6b750405e2df3a9b5311a9a53b4), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/MaterialInstances/MI_Sheen_Blend_DS.MI_Sheen_Blend_DS in PCD3D_SM5, Default, SM5, Game (DDC key hash: 90b9de9d7b4b5e6a9f8832d83f6673515a804f5b), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/MaterialInstances/MI_Sheen_Mask_DS.MI_Sheen_Mask_DS in PCD3D_SM5, Default, SM5, Game (DDC key hash: 85e2c0d484335deec07221d7550df7ce1ddebe01), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/MaterialInstances/MI_Sheen_Opaque_DS.MI_Sheen_Opaque_DS in PCD3D_SM5, Default, SM5, Game (DDC key hash: 62fa63602def0a3c6c4cff24a845364fd4d01805), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/MaterialInstances/MI_Sheen_Blend.MI_Sheen_Blend in PCD3D_SM5, Default, SM5, Game (DDC key hash: a24bc1856b8ea02725d7eacd0736007f61be4403), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/MaterialInstances/MI_Sheen_Mask.MI_Sheen_Mask in PCD3D_SM5, Default, SM5, Game (DDC key hash: 6e411b16d2211d082058db71ea110031494cba96), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/M_Sheen.M_Sheen in PCD3D_SM5, Default, SM5, Game (DDC key hash: 2f0f77a3437d8c35cf08e46fcb9acd7792c33f7f), compiling.
+LogCook: Display: Cooked packages 167 Packages Remain 352 Total 519
+LogTextureFormatOodle: Display: Oodle Texture loading DLL: oo2tex_win64_2.9.11.dll
+LogTextureFormatOodle: Display: Oodle Texture loading DLL: oo2tex_win64_2.9.12.dll
+LogTextureFormatOodle: Display: Oodle Texture loading DLL: oo2tex_win64_2.9.15.dll
+LogCook: Display: Cooked packages 221 Packages Remain 298 Total 519
+LogWorldPartition: Display: [Cook] Gathering packages to cook from generators for owner object World /Game/BearCampus.BearCampus.
+LogWorldPartition: Display: WorldPartition initialize started...
+LogWorldPartition: Display: WorldPartition initialize took 10.851 ms
+LogWorldPartition: Display: GenerateStreaming for 'BearCampus' started...
+LogWorldPartition: Display: GenerateStreaming for 'BearCampus' took 4.866 ms
+LogWorldPartition: Display: [Cook] Gathered 0 packages to generate from 1 Generators.
+LogWorldPartition: Display: [Cook] Sending 0 packages to be generated.
+LogWorldPartition: Display: [Cook] Debug(GetGenerateList) : OwnerWorld=World /Game/BearCampus.BearCampus
+LogCook: Display: Splitting Package /Game/BearCampus with splitter FWorldCookPackageSplitter acting on object World /Game/BearCampus.BearCampus.
+LogWorldPartition: Display: [Cook] Gathering packages to cook from generators for owner object World /Game/WonderPond.WonderPond.
+LogWorldPartition: Display: WorldPartition initialize started...
+LogWorldPartition: Display: WorldPartition initialize took 2.273 ms (total: 13.124 ms)
+LogWorldPartition: Display: GenerateStreaming for 'WonderPond' started...
+LogWorldPartition: Display: GenerateStreaming for 'WonderPond' took 2.880 ms (total: 7.747 ms)
+LogWorldPartition: Display: [Cook] Gathered 0 packages to generate from 1 Generators.
+LogWorldPartition: Display: [Cook] Sending 0 packages to be generated.
+LogWorldPartition: Display: [Cook] Debug(GetGenerateList) : OwnerWorld=World /Game/WonderPond.WonderPond
+LogCook: Display: Splitting Package /Game/WonderPond with splitter FWorldCookPackageSplitter acting on object World /Game/WonderPond.WonderPond.
+LogWorldPartition: Display: [Cook] Gathering packages to cook from generators for owner object World /Game/WhiteTreeForest.WhiteTreeForest.
+LogWorldPartition: Display: WorldPartition initialize started...
+LogWorldPartition: Display: WorldPartition initialize took 3.805 ms (total: 16.929 ms)
+LogWorldPartition: Display: GenerateStreaming for 'WhiteTreeForest' started...
+LogWorldPartition: Display: GenerateStreaming for 'WhiteTreeForest' took 6.965 ms (total: 14.712 ms)
+LogWorldPartition: Display: [Cook] Gathered 64 packages to generate from 1 Generators.
+LogWorldPartition: Display: [Cook] Sending 64 packages to be generated.
+LogWorldPartition: Display: [Cook] Debug(GetGenerateList) : OwnerWorld=World /Game/WhiteTreeForest.WhiteTreeForest
+LogCook: Display: Splitting Package /Game/WhiteTreeForest with splitter FWorldCookPackageSplitter acting on object World /Game/WhiteTreeForest.WhiteTreeForest.
+LogWorldPartition: Display: [Cook][PopulateGeneratorPackage] Processing 64 packages
+PIE: Warning: AttachTo: '/Game/WhiteTreeForest.WhiteTreeForest:PersistentLevel.TdfMapBuilder_UAID_E0D55EDFC383CEEB02_1738419912.Root' is not static , cannot attach '/Game/WhiteTreeForest.WhiteTreeForest:PersistentLevel.TdfMapBuilder_UAID_E0D55EDFC383CEEB02_1738419912.WaterISM' which is static to it. Aborting.
+PIE: Warning: AttachTo: '/Game/WhiteTreeForest.WhiteTreeForest:PersistentLevel.TdfMapBuilder_UAID_E0D55EDFC383CEEB02_1738419912.Root' is not static , cannot attach '/Game/WhiteTreeForest.WhiteTreeForest:PersistentLevel.TdfMapBuilder_UAID_E0D55EDFC383CEEB02_1738419912.MarkerISM' which is static to it. Aborting.
+PIE: Warning: AttachTo: '/Game/WhiteTreeForest.WhiteTreeForest:PersistentLevel.TdfMapBuilder_UAID_E0D55EDFC383CEEB02_1738419912.Root' is not static , cannot attach '/Game/WhiteTreeForest.WhiteTreeForest:PersistentLevel.TdfMapBuilder_UAID_E0D55EDFC383CEEB02_1738419912.FurnitureISM' which is static to it. Aborting.
+LogWorldPartition: Display: [Cook][PopulateGeneratorPackage] Gathered 72 modified packages
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/Substrate/M_GLTF.M_GLTF in PCD3D_SM5, Default, SM5, Game (DDC key hash: 487686ca1f917c0e9211934d6f980c47724200f3), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineSky/M_Sky_Panning_Clouds2.M_Sky_Panning_Clouds2 in PCD3D_SM5, Default, SM5, Game (DDC key hash: f7a8c96a4ffa92c7a34eb67d683654aeaad60949), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/MaterialInstances/MI_Unlit_Blend_DS.MI_Unlit_Blend_DS in PCD3D_SM5, Default, SM5, Game (DDC key hash: 7faa24826543c6b4826f6fe75ffab5a4ed45b34b), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/MaterialInstances/MI_Unlit_Mask_DS.MI_Unlit_Mask_DS in PCD3D_SM5, Default, SM5, Game (DDC key hash: 394c03115ad5ff8f07c684f7a7c504adbc494137), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/MaterialInstances/MI_Unlit_Opaque_DS.MI_Unlit_Opaque_DS in PCD3D_SM5, Default, SM5, Game (DDC key hash: 49b4ac3b3d841c1749556e82f8cddc205c39aa4e), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/MaterialInstances/MI_Unlit_Blend.MI_Unlit_Blend in PCD3D_SM5, Default, SM5, Game (DDC key hash: 229e895566f0441d24c0fb6a2c1451a01c28b7c3), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/MaterialInstances/MI_Unlit_Mask.MI_Unlit_Mask in PCD3D_SM5, Default, SM5, Game (DDC key hash: 780615ebc3b2a9455c223254f5a8656fa046d479), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/M_Unlit.M_Unlit in PCD3D_SM5, Default, SM5, Game (DDC key hash: 3edd530f8a417a4ae40a4703b7a0b90f3bbf4bfc), compiling.
+LogMaterial: Display: Missing cached shadermap for /InterchangeAssets/gltf/MaterialInstances/MI_SpecularGlossiness_Blend_DS.MI_SpecularGlossiness_Blend_DS in PCD3D_SM5, Default, SM5, Game (DDC key hash: 4aa4afd16a0a4e1ab27661778e571fb8f8ed2b70), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineSky/VolumetricClouds/m_SimpleVolumetricCloud.m_SimpleVolumetricCloud in PCD3D_SM5, Default, SM5, Game (DDC key hash: 3d54df2d1e0b1f94d16abe7026a68eff31ec7825), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/VREditor/TransformGizmo/TransformGizmoMaterial.TransformGizmoMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: 645fe22deb763969a9bb05ed3996a6842590764e), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EditorMaterials/Dataflow/M_Dataflow_CheckerBoard.M_Dataflow_CheckerBoard in PCD3D_SM5, Default, SM5, Game (DDC key hash: f3ee9da09d49ed227df2ff4211525128a6a05b80), compiling.
+LogMaterial: Display: Missing cached shadermap for /Paper2D/DefaultSpriteMaterial.DefaultSpriteMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: beb0c423b601f0206a8392890fbf0c5ad2b5e4f6), compiling.
+LogMaterial: Display: Missing cached shadermap for /ControlRig/M_Manip.M_Manip in PCD3D_SM5, Default, SM5, Game (DDC key hash: 175d0a9ae5c3389abb39129493e60544decf4d09), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineMaterials/PhAT_JointLimitMaterial.PhAT_JointLimitMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: 6b44ff79dd24fdadd143dff5c2ae696fe6d94539), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EditorLandscapeResources/LayerVisMaterial.LayerVisMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: ce4da7767967f50dce3c42005120a0ad5358d920), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EditorLandscapeResources/SelectBrushMaterial.SelectBrushMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: 3314332b90667acb03f8150d8e0fa4f665b2b945), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EditorLandscapeResources/ColorMaskBrushMaterial.ColorMaskBrushMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: bbde0d59239b4d3b8fe98cf7813c2104d0e1a781), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EditorLandscapeResources/LandscapeDirtyMaterial.LandscapeDirtyMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: 9091c7dbc13c101d061ba4fd5e3de008be0ee63b), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineMaterials/EmissiveMeshMaterial.EmissiveMeshMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: 595220166cf37c6841f329a27d393fe6afeb0695), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineMaterials/M_InvalidLightmapSettings.M_InvalidLightmapSettings in PCD3D_SM5, Default, SM5, Game (DDC key hash: c26a962ae7870d69b9a8c15e6afd496d554ad3bc), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineMaterials/FlattenMaterial.FlattenMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: 1921bc93e5526b5be38640b447f01a86ec7df681), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineMaterials/FlattenMaterial_VT.FlattenMaterial_VT in PCD3D_SM5, Default, SM5, Game (DDC key hash: c4b4651af921e1f114a978f344adb51c39e86342), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineMaterials/FlattenMaterial_WS_Normal_VT.FlattenMaterial_WS_Normal_VT in PCD3D_SM5, Default, SM5, Game (DDC key hash: b387594b3aa5a202538fedcbdb0b62ce2f2ccc56), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineSky/M_SimpleSkyDome.M_SimpleSkyDome in PCD3D_SM5, Default, SM5, Game (DDC key hash: 493019cc762aac21a82a80f2c369fdfc363e9aa6), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineMaterials/DefaultLightFunctionMaterial.DefaultLightFunctionMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: a183819e4b1ff832e853abe8632a067685dc4d7a), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EditorMaterials/WidgetVertexColorMaterial.WidgetVertexColorMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: ea1393580492c2896d1a3e284b5e5a5158f768ee), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EditorMaterials/Camera/CineMat.CineMat in PCD3D_SM5, Default, SM5, Game (DDC key hash: be9b927b192222609414aafffcbb444a356362b2), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EditorLandscapeResources/SplineEditorMeshMat.SplineEditorMeshMat in PCD3D_SM5, Default, SM5, Game (DDC key hash: e665b83e2fbd347e565b2a277ce5ca90433d73ca), compiling.
+LogMaterial: Display: Missing cached shadermap for /HairStrands/Materials/HairDefaultMaterial.HairDefaultMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: e1cd878cab69e63c27ce8b3cc08ea07dc3c3c2f4), compiling.
+LogMaterial: Display: Missing cached shadermap for /HairStrands/Materials/HairCardsDefaultMaterial.HairCardsDefaultMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: 1549f41b05d21a76e0e4ce0d1b634a3776539e1c), compiling.
+LogMaterial: Display: Missing cached shadermap for /HairStrands/Materials/HairMeshesDefaultMaterial.HairMeshesDefaultMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: 09f4cea765db46c7e0fd65b9c909db238f5573bd), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/VREditor/TransformGizmo/TranslucentTransformGizmoMaterial.TranslucentTransformGizmoMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: b1c4e2ee55e25c967c03dcb88fabc38eff5e8621), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineDebugMaterials/M_SimpleUnlitTranslucent.M_SimpleUnlitTranslucent in PCD3D_SM5, Default, SM5, Game (DDC key hash: e42b161d4baed627de2563039175463bede899fe), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EditorMaterials/PreviewShadowIndicatorMaterial.PreviewShadowIndicatorMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: 2fab87873ac5cf03623bdc653b02e637a38e7da9), compiling.
+LogMaterial: Display: Missing cached shadermap for /ControlRig/Controls/ControlRigXRayMaterial.ControlRigXRayMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: 9da4e2ca06e87686b09ad303b747e295ccfd9a78), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/BasicShapes/BasicShapeMaterial.BasicShapeMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: cd442329a30ebd9ebbae6de38b765fb4e1eaabd5), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/VREditor/TransformGizmo/Main.Main in PCD3D_SM5, Default, SM5, Game (DDC key hash: 784848d659eaffcb79a9b918741d93eb39b24231), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/VREditor/TransformGizmo/Xray.Xray in PCD3D_SM5, Default, SM5, Game (DDC key hash: fac60d3be2e8434f012cee5c6a8df1997af3e999), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EditorMaterials/Dataflow/DataflowVertexMaterial.DataflowVertexMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: e0a18a2be1715212351ea8edf97ab5fd5be3e100), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EditorMaterials/Dataflow/DataflowTwoSidedVertexMaterial.DataflowTwoSidedVertexMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: 162a6059be6ffcd3278c7e0e4a19a677e4e2727d), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EditorMaterials/Dataflow/DataflowTwoSidedVertexMaterial.SculptMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: f0694f727b32542f9435d62e2457f175773afc77), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineMaterials/NaniteHiddenSectionMaterial.NaniteHiddenSectionMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: 0c5b37ef4a7302d832b74a9e386e6d50ca9c36a6), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineMaterials/RemoveSurfaceMaterial.RemoveSurfaceMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: e2b391a45638ffac26503ee0eb446febd8763a86), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineDebugMaterials/DebugMeshMaterial.DebugMeshMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: c8e6867a551539f5e67a233980f4c81b038abc60), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineMaterials/GizmoMaterial.GizmoMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: f526a331b36b23f3d020d90953f9c88909eae4fe), compiling.
+LogWorldPartition: Display: [Cook][PopulateGeneratorPackage] Processing 0 packages
+PIE: Warning: AttachTo: '/Game/BearCampus.BearCampus:PersistentLevel.TdfMapBuilder_Forest_UAID_E0D55EDFC3831CEC02_1596128640.Root' is not static , cannot attach '/Game/BearCampus.BearCampus:PersistentLevel.TdfMapBuilder_Forest_UAID_E0D55EDFC3831CEC02_1596128640.FurnitureISM' which is static to it. Aborting.
+LogWorldPartition: Display: [Cook][PopulateGeneratorPackage] Gathered 73 modified packages
+LogTextureFormatOodle: Display: Oodle Texture loading DLL: oo2tex_win64_2.9.7.dll
+LogMaterial: Display: Missing cached shadermap for /Engine/EditorMaterials/PhAT_UnselectedMaterial.PhAT_UnselectedMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: 945ed946e4b35dd94bf948d93daf1da36616c7aa), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EditorMaterials/PhAT_NoCollisionMaterial.PhAT_NoCollisionMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: 4fd59a8bcd5ef57edb4c3ac00188a42fafd1f8a2), compiling.
+LogWorldPartition: Display: [Cook][PopulateGeneratorPackage] Processing 0 packages
+PIE: Warning: AttachTo: '/Game/WonderPond.WonderPond:PersistentLevel.TdfMapBuilder_Waddon_UAID_E0D55EDFC383FCEB02_1100742007.Root' is not static , cannot attach '/Game/WonderPond.WonderPond:PersistentLevel.TdfMapBuilder_Waddon_UAID_E0D55EDFC383FCEB02_1100742007.WaterISM' which is static to it. Aborting.
+PIE: Warning: AttachTo: '/Game/WonderPond.WonderPond:PersistentLevel.TdfMapBuilder_Waddon_UAID_E0D55EDFC383FCEB02_1100742007.Root' is not static , cannot attach '/Game/WonderPond.WonderPond:PersistentLevel.TdfMapBuilder_Waddon_UAID_E0D55EDFC383FCEB02_1100742007.MarkerISM' which is static to it. Aborting.
+PIE: Warning: AttachTo: '/Game/WonderPond.WonderPond:PersistentLevel.TdfMapBuilder_Waddon_UAID_E0D55EDFC383FCEB02_1100742007.Root' is not static , cannot attach '/Game/WonderPond.WonderPond:PersistentLevel.TdfMapBuilder_Waddon_UAID_E0D55EDFC383FCEB02_1100742007.FurnitureISM' which is static to it. Aborting.
+LogWorldPartition: Display: [Cook][PopulateGeneratorPackage] Gathered 71 modified packages
+LogMaterial: Display: Missing cached shadermap for /Game/WhiteTreeForest/_Generated_/4SDWD0PEKP4SJ82SVJL58OA5J.WhiteTreeForest:PersistentLevel.LandscapeStreamingProxy_D7T4VF4LBP34PHV9XOEVM5TIG_1_2_2_0.LandscapeMaterialInstanceConstant_1 in PCD3D_SM5, Default, SM5, Game (DDC key hash: 93cb0cab3f1dc3930df45edce5ca2c2659e42238), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/WonderPond.M_HLOD0_OpenWorld_MainGrid_L0_X-4_Y-4_DL0LandscapeStreamingProxy_D7T4VF4LBP34PHV9XOEVM5TIG_1_0_0_0 in PCD3D_SM5, Default, SM5, Game (DDC key hash: 147fb9055b8dd31e107afbc3517aee8dc8609a87), compiling.
+LogCook: Display: Cooked packages 330 Packages Remain 253 Total 583
+LogMaterial: Display: Missing cached shadermap for /Game/WhiteTreeForest/_Generated_/9RNTF4SILECNUDBS1CM9FNUTP.WhiteTreeForest:PersistentLevel.LandscapeStreamingProxy_D7T4VF4LBP34PHV9XOEVM5TIG_1_4_7_0.LandscapeMaterialInstanceConstant_1 in PCD3D_SM5, Default, SM5, Game (DDC key hash: 93cb0cab3f1dc3930df45edce5ca2c2659e42238), compiling.
+LogMaterial: Display: Missing cached shadermap for /Game/WhiteTreeForest/_Generated_/CBCVDYRM5O8YKVIQNMHUGUEHJ.WhiteTreeForest:PersistentLevel.LandscapeStreamingProxy_D7T4VF4LBP34PHV9XOEVM5TIG_1_6_2_0.LandscapeMaterialInstanceConstant_1 in PCD3D_SM5, Default, SM5, Game (DDC key hash: 93cb0cab3f1dc3930df45edce5ca2c2659e42238), compiling.
+LogDerivedDataCache: Display: ZenLocal: Cache put found non-deterministic record for MaterialShaderMap/93cb0cab3f1dc3930df45edce5ca2c2659e42238 from '/Game/WhiteTreeForest/_Generated_/9RNTF4SILECNUDBS1CM9FNUTP [PCD3D_SM5, SM5, Default]'
+LogMaterial: Display: Missing cached shadermap for /Game/WhiteTreeForest/_Generated_/D2DFYM1IEW83OMJCY3EK3PL0J.WhiteTreeForest:PersistentLevel.LandscapeStreamingProxy_D7T4VF4LBP34PHV9XOEVM5TIG_1_7_3_0.LandscapeMaterialInstanceConstant_1 in PCD3D_SM5, Default, SM5, Game (DDC key hash: 93cb0cab3f1dc3930df45edce5ca2c2659e42238), compiling.
+LogDerivedDataCache: Display: C:/Users/RedIce/AppData/Local/UnrealEngine/Common/DerivedDataCache: Cache put found non-deterministic record for MaterialShaderMap/93cb0cab3f1dc3930df45edce5ca2c2659e42238 from '/Game/WhiteTreeForest/_Generated_/9RNTF4SILECNUDBS1CM9FNUTP [PCD3D_SM5, SM5, Default]'
+LogDerivedDataCache: Display: ZenLocal: Cache put found non-deterministic record for MaterialShaderMap/93cb0cab3f1dc3930df45edce5ca2c2659e42238 from '/Game/WhiteTreeForest/_Generated_/D2DFYM1IEW83OMJCY3EK3PL0J [PCD3D_SM5, SM5, Default]'
+LogDerivedDataCache: Display: ZenLocal: Cache put found non-deterministic record for MaterialShaderMap/93cb0cab3f1dc3930df45edce5ca2c2659e42238 from '/Game/WhiteTreeForest/_Generated_/CBCVDYRM5O8YKVIQNMHUGUEHJ [PCD3D_SM5, SM5, Default]'
+LogDerivedDataCache: Display: C:/Users/RedIce/AppData/Local/UnrealEngine/Common/DerivedDataCache: Cache put found non-deterministic record for MaterialShaderMap/93cb0cab3f1dc3930df45edce5ca2c2659e42238 from '/Game/WhiteTreeForest/_Generated_/D2DFYM1IEW83OMJCY3EK3PL0J [PCD3D_SM5, SM5, Default]'
+LogDerivedDataCache: Display: C:/Users/RedIce/AppData/Local/UnrealEngine/Common/DerivedDataCache: Cache put found non-deterministic record for MaterialShaderMap/93cb0cab3f1dc3930df45edce5ca2c2659e42238 from '/Game/WhiteTreeForest/_Generated_/CBCVDYRM5O8YKVIQNMHUGUEHJ [PCD3D_SM5, SM5, Default]'
+LogCook: Display: Cooked packages 474 Packages Remain 113 Total 587
+LogTextureFormatOodle: Display: Oodle Texture loading DLL: oo2tex_win64_2.9.5.dll
+LogMaterial: Display: Missing cached shadermap for /Engine/OpenWorldTemplate/LandscapeMaterial/M_ProcGrid.M_ProcGrid in PCD3D_SM5, Default, SM5, Game (DDC key hash: 3400e7205daf2740e9e9b0979c072cea56d8e4dd), compiling.
+LogCook: Display: Cooked packages 501 Packages Remain 86 Total 587
+LogCook: Display: Cooked packages 510 Packages Remain 77 Total 587
+LogTextureFormatOodle: Display: Oodle Texture loading DLL: oo2tex_win64_2.9.13.dll
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineDebugMaterials/DebugEditorMaterial.DebugEditorMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: fd0dfaae6948e1ce51a583ea2946cdb1d7a6d6fe), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineMaterials/PPM_DefaultCalibrationGrayscale.PPM_DefaultCalibrationGrayscale in PCD3D_SM5, Default, SM5, Game (DDC key hash: 514de91a350fe459b7dd8b305213590850d768c2), compiling.
+LogMaterial: Display: Missing cached shadermap for /Engine/EngineMaterials/PPM_DefaultCalibrationColor.PPM_DefaultCalibrationColor in PCD3D_SM5, Default, SM5, Game (DDC key hash: f5b12c169e34267c3b1754b0af36f8e85f727c38), compiling.
+LogCook: Display: Cooked packages 580 Packages Remain 7 Total 587
+LogCook: Display: Cooked packages 583 Packages Remain 4 Total 587
+LogMaterial: Display: Missing cached shadermap for /ControlRig/Controls/ControlRigGizmoMaterial.ControlRigGizmoMaterial in PCD3D_SM5, Default, SM5, Game (DDC key hash: a92090b56c337a89010568432347c0c886874e8a), compiling.
+LogWorldPartition: Display: [Cook] Debug(TearDown): OwnerWorld=World /Game/BearCampus.BearCampus
+LogWorldPartition: Display: [Cook] Debug(TearDown): OwnerWorld=World /Game/WonderPond.WonderPond
+LogCook: Display: Cooked packages 585 Packages Remain 2 Total 587
+LogWorldPartition: Display: [Cook] Debug(TearDown): OwnerWorld=World /Game/WhiteTreeForest.WhiteTreeForest
+LogCook: Display: Cooked packages 587 Packages Remain 0 Total 587
+LogCook: Display: Cook Diagnostics: OpenFileHandles=5200, VirtualMemory=2484MiB, VirtualMemoryAvailable=18113MiB
+LogCook: Display: ---- Finalisation: Start ----
+LogShaderCompilers: Display: ================================================
+LogShaderCompilers: Display: === FShaderJobCache stats ===
+LogShaderCompilers: Display: Total job queries 3,162, among them cache hits 915 (28.94%), DDC hits 2,195 (69.42%), Duplicates 39 (1.23%)
+LogShaderCompilers: Display: Tracking 2,208 distinct input hashes that result in 1,297 distinct outputs (58.74%)
+LogShaderCompilers: Display: RAM used: 5.34 MiB of 819.20 MiB budget. Usage: 0.65%
+LogShaderCompilers: Display: === Shader Compilation stats ===
+LogShaderCompilers: Display: Shaders Compiled: 13
+LogShaderCompilers: Display: Jobs assigned 13, completed 13 (100%)
+LogShaderCompilers: Display: Time job spent in pending queue: average 0.06 s, longest 0.11 s
+LogShaderCompilers: Display: Job execution time: average 11.13 s, max 12.14 s
+LogShaderCompilers: Display: Job life time (pending + execution): average 11.18 s, max 12.20
+LogShaderCompilers: Display: Shader code size: total 171.891 KiB, numShaders 13, average 13.222 KiB, min 6.094 KiB, max 16.555 KiB
+LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 12.21 s
+LogShaderCompilers: Display: Jobs were issued in 5 batches (only local compilation was used), average 2.60 jobs/batch
+LogShaderCompilers: Display: Average processing rate: 1.06 jobs/sec
+LogShaderCompilers: Display: Total thread time: 42.7 s
+LogShaderCompilers: Display: Total thread preprocess time: 37.723 s
+LogShaderCompilers: Display: Percentage time preprocessing: 88.34%
+LogShaderCompilers: Display: Effective parallelization: 3.50 (times faster than compiling all shaders on one thread). Compare with number of workers: 4 - 0.874167
+LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+LogShaderCompilers: Display:                                 TBasePassPSTLightMapPolicyHQ (compiled    1 times, average 6.58 sec, max 6.58 sec, min 6.58 sec)
+LogShaderCompilers: Display:               TBasePassPSFCachedVolumeIndirectLightingPolicy (compiled    2 times, average 5.11 sec, max 7.20 sec, min 3.01 sec)
+LogShaderCompilers: Display:          TBasePassVSTDistanceFieldShadowsAndLightMapPolicyHQ (compiled    1 times, average 4.36 sec, max 4.36 sec, min 4.36 sec)
+LogShaderCompilers: Display:      TBasePassPSFPrecomputedVolumetricLightmapLightingPolicy (compiled    2 times, average 4.04 sec, max 5.90 sec, min 2.17 sec)
+LogShaderCompilers: Display:                                 TBasePassVSTLightMapPolicyHQ (compiled    1 times, average 2.45 sec, max 2.45 sec, min 2.45 sec)
+LogShaderCompilers: Display: Top 5 shader types by total compile time:
+LogShaderCompilers: Display:               TBasePassPSFCachedVolumeIndirectLightingPolicy - 23.93% of total time (compiled    2 times, average 5.11 sec, max 7.20 sec, min 3.01 sec)
+LogShaderCompilers: Display:      TBasePassPSFPrecomputedVolumetricLightmapLightingPolicy - 18.91% of total time (compiled    2 times, average 4.04 sec, max 5.90 sec, min 2.17 sec)
+LogShaderCompilers: Display:                                 TBasePassPSTLightMapPolicyHQ - 15.41% of total time (compiled    1 times, average 6.58 sec, max 6.58 sec, min 6.58 sec)
+LogShaderCompilers: Display:          TBasePassVSTDistanceFieldShadowsAndLightMapPolicyHQ - 10.22% of total time (compiled    1 times, average 4.36 sec, max 4.36 sec, min 4.36 sec)
+LogShaderCompilers: Display:                TBasePassPSFCachedPointIndirectLightingPolicy - 9.69% of total time (compiled    2 times, average 2.07 sec, max 2.40 sec, min 1.74 sec)
+LogShaderCompilers: Display: === Material stats ===
+LogShaderCompilers: Display: Materials Cooked:        749
+LogShaderCompilers: Display: Materials Translated:    108
+LogShaderCompilers: Display: Material Total Translate Time: 0.22 s
+LogShaderCompilers: Display: Material Translation Only: 0.17 s (80%)
+LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (0%)
+LogShaderCompilers: Display: Material Cache Hits: 0 (0%)
+LogShaderCompilers: Display: ================================================
+LogCook: Display: CookArtifact 'D:/NSA Unreal Engine/New Folder For Migration/Saved/Cooked/Windows/TheDheerFather/Metadata/ValidationCookArtifact.json' saved.
+LogAssetRegistryGenerator: Display: Saving asset registry v24.
+LogAssetRegistryGenerator: Display: Generated development asset registry D:/NSA Unreal Engine/New Folder For Migration/Saved/Cooked/Windows/TheDheerFather/Metadata/DevelopmentAssetRegistry.bin num assets 589, size is 452.14kb, XxHash64[LE] = 0x4B3F546898C11CF8, waited on hash 0.00 seconds
+LogAssetRegistryGenerator: Display: Generated asset registry num assets 582, size is 160.59kb
+LogShaderLibrary: Display:
+LogShaderLibrary: Display: Shader Library 'TheDheerFather' (PCD3D_SM5-PCD3D_SM5) Stats:
+LogShaderLibrary: Display: =================
+LogShaderLibrary: Display: Assets: 157, Unique Shadermaps: 106 (67.52%)
+LogShaderLibrary: Display: Total Shaders: 1987, Unique Shaders: 1361 (68.50%)
+LogShaderLibrary: Display: Total Shader Size: 5.77mb, Unique Shaders Size: 4.38mb (76.02%)
+LogShaderLibrary: Display: === Extended info:
+LogShaderLibrary: Display: Minimum number of shaders in shadermap: 1
+LogShaderLibrary: Display: Median number of shaders in shadermap: 10
+LogShaderLibrary: Display: Maximum number of shaders in shadermap: 476
+LogShaderLibrary: Display: Number of shadermaps referencing top 10 most shared shaders:
+LogShaderLibrary: Display:     18, 18, 17, 16, 16, 16, 15, 15, 15, 11
+LogShaderLibrary: Display: Unique shaders itemization (sorted by compressed size):
+LogShaderLibrary: Display: SF_Pixel: 760 shaders (55.84%), compressed size: 2.33 MB (3.14 KB avg per shader), uncompressed size: 8.48 MB (11.43 KB avg per shader)
+LogShaderLibrary: Display: SF_Vertex: 485 shaders (35.64%), compressed size: 1.22 MB (2.58 KB avg per shader), uncompressed size: 3.69 MB (7.78 KB avg per shader)
+LogShaderLibrary: Display: SF_Compute: 114 shaders (8.38%), compressed size: 0.83 MB (7.46 KB avg per shader), uncompressed size: 3.66 MB (32.87 KB avg per shader)
+LogShaderLibrary: Display: SF_Geometry: 2 shaders (0.15%), compressed size: 0.00 MB (1.75 KB avg per shader), uncompressed size: 0.01 MB (5.60 KB avg per shader)
+LogShaderLibrary: Display: Textual dump saved to '../../../../../NSA Unreal Engine/New Folder For Migration/Saved/Shaders/PCD3D_SM5-PCD3D_SM5/ShaderDebug-TheDheerFather-PCD3D_SM5-PCD3D_SM5/Dump.txt'
+LogShaderLibrary: Display: =================
+LogCook: Display: Dependent plugin "SteamShared" referenced by "EOS Shared" wasn't found in enabled plugins list when creating cook metadata file... skipping
+LogCook: Display: Dependent plugin "UAF" referenced by "IK Rig" wasn't found in enabled plugins list when creating cook metadata file... skipping
+LogCook: Display: Dependent plugin "UAFAnimGraph" referenced by "IK Rig" wasn't found in enabled plugins list when creating cook metadata file... skipping
+LogCook: Display: Finalize package store(s)...
+LogZenStoreWriter: Display: Flushing...
+LogZenStoreWriter: Display: Saving Zen filesystem manifest 'D:/NSA Unreal Engine/New Folder For Migration/Saved/Cooked/Windows/TheDheerFather/Metadata/zenfs.manifest'
+LogZenStoreWriter: Display: Output:	50000 Public runtime script objects
+LogCook: Display: Cook by the book total time in tick 21.306833s total time 25.911634
+LogCook: Display: Peak Used virtual 2543 MiB Peak Used physical 2734 MiB
+LogCook: Display: Packages Cooked: 580, Packages Incrementally Skipped: 0, Packages Skipped by Platform: 7, Total Packages: 587
+LogCookStats: Display: Hierarchy Timer Information:
+LogCookStats: Display:   Root: 0.000s (0)
+LogCookStats: Display:     CleanSandbox: 0.020s (1)
+LogCookStats: Display:     CollectFilesToCook: 0.004s (1)
+LogCookStats: Display:       CookModificationDelegate: 0.000s (1)
+LogCookStats: Display:     GenerateLongPackageName: 0.001s (1)
+LogCookStats: Display:     TickMainCookLoop: 21.307s (2)
+LogCookStats: Display:       PumpPollables: 0.006s (5)
+LogCookStats: Display:       PumpRequests: 0.026s (24)
+LogCookStats: Display:       LoadPackageForCooking: 1.696s (3637)
+LogCookStats: Display:       ValidateSourcePackage: 0.000s (587)
+LogCookStats: Display:       SavingPackages: 11.057s (998)
+LogCookStats: Display:         PollPendingCookedPlatformDatas: 1.111s (50779)
+LogCookStats: Display:         PrepareSave: 3.029s (50354)
+LogCookStats: Display:         PrecachePlatformDataForNextPackage: 2.432s (586)
+LogCookStats: Display:           PrepareSave: 2.431s (856)
+LogCookStats: Display:         SaveCookedPackage: 4.345s (587)
+LogCookStats: Display:           GEditorSavePackage: 4.128s (587)
+LogCookStats: Display:             VerifyCanCookPackage: 0.003s (580)
+LogCookStats: Display:           TargetDomainDependencies: 0.123s (587)
+LogCookStats: Display:         ClearAllCachedCookedPlatformData: 0.053s (587)
+LogCookStats: Display:       PostLoadPackageFixup: 0.000s (5)
+LogCookStats: Display:       WaitForAsync: 8.202s (109310)
+LogCookStats: Display:     CookByTheBookFinished: 0.470s (1)
+LogCookStats: Display:       SavingCurrentIniSettings: 0.034s (1)
+LogCookStats: Display:         ProcessingAccessedStrings: 0.003s (1)
+LogCookStats: Display:       ChunkGeneration: 0.013s (1)
+LogCookStats: Display:       FinishPopulateShaderLibrary: 0.001s (1)
+LogCookStats: Display:       CalculateReferencedSet: 0.000s (1)
+LogCookStats: Display:       CookArtifacts.UpdateOplogPackages: 0.008s (1)
+LogCookStats: Display:       PruneShaderLibrary: 0.001s (1)
+LogCookStats: Display:       GeneratorPreSave: 0.000s (1)
+LogCookStats: Display:       BuildChunkManifest: 0.012s (1)
+LogCookStats: Display:         FixupPackageDependenciesForChunks: 0.006s (1)
+LogCookStats: Display:       SaveManifests: 0.000s (1)
+LogCookStats: Display:       SaveAssetRegistry: 0.032s (1)
+LogCookStats: Display:       WriteCookerOpenOrder: 0.003s (1)
+LogCookStats: Display:       WriteCookMetadata: 0.001s (1)
+LogCookStats: Display:       WriteReferencedSet: 0.001s (1)
+LogCookStats: Display:       FinalizePackageStore: 0.303s (1)
+LogCookStats: Display: Misc Cook Stats
+LogCookStats: Display: ===============
+LogCookStats: Display: Validation
+LogCookStats: Display:     Stats=[]
+LogCookStats: Display: Niagara
+LogCookStats: Display:     NiagaraScriptTranslationCount=0
+LogCookStats: Display:     NiagaraCpuScriptCompileCount=0
+LogCookStats: Display:     NiagaraCpuScriptDdcCacheHitCount=0
+LogCookStats: Display:     NiagaraCpuScriptDdcCacheMissCount=0
+LogCookStats: Display:     NiagaraGpuScriptCompileCount=0
+LogCookStats: Display:     NiagaraGpuScriptDdcCacheHitCount=0
+LogCookStats: Display:     NiagaraGpuScriptDdcCacheMissCount=0
+LogCookStats: Display:     NiagaraSystemWaitForCompilationCompleteTime=0.000000
+LogCookStats: Display: ComputeKernelShader.Misc
+LogCookStats: Display:     ShadersCompiled=0
+LogCookStats: Display: NiagaraShader.Misc
+LogCookStats: Display:     ShadersCompiled=0
+LogCookStats: Display: ShaderCompiler
+LogCookStats: Display:     BlockingTimeSec=0.000060
+LogCookStats: Display:     AsyncCompileTimeSec=50.373599
+LogCookStats: Display:     GlobalBeginCompileShaderTimeSec=0.244099
+LogCookStats: Display:     GlobalBeginCompileShaderCalls=3307
+LogCookStats: Display:     ProcessAsyncResultsTimeSec=0.358365
+LogCookStats: Display: GlobalShader.Misc
+LogCookStats: Display:     ShadersCompiled=0
+LogCookStats: Display: Material
+LogCookStats: Display:     FinishCacheShadersSec=0.677845
+LogCookStats: Display: Cook.Profile.Params
+LogCookStats: Display:     CookProject=TheDheerFather
+LogCookStats: Display:     CookCultures=
+LogCookStats: Display:     CookLabel=
+LogCookStats: Display:     TargetPlatforms=Windows
+LogCookStats: Display:     IsCookAll=false
+LogCookStats: Display:     IsCookOnTheFly=false
+LogCookStats: Display:     IsIncrementalCook=false
+LogCookStats: Display:     IsIterativeCook=false
+LogCookStats: Display:     IsFastCook=false
+LogCookStats: Display:     IsUnversioned=true
+LogCookStats: Display: CookOnTheFlyServer.Package.Load
+LogCookStats: Display:     NumRequestedLoads=3342
+LogCookStats: Display:     NumPackagesLoaded=3688
+LogCookStats: Display:     NumInlineLoads=346
+LogCookStats: Display: CookOnTheFlyServer.Package.Save
+LogCookStats: Display:     NumPackagesIncrementallySkipped=0
+LogCookStats: Display: CookOnTheFlyServer.QueueSize
+LogCookStats: Display:     PeakRequest=518
+LogCookStats: Display:     PeakLoad=147
+LogCookStats: Display:     PeakSave=216
+LogCookStats: Display: Package.Load
+LogCookStats: Display:     LoadPackageTimeSec=2.271909
+LogCookStats: Display: Package.Save
+LogCookStats: Display:     NumPackagesSaved=587
+LogCookStats: Display:     SavePackageTimeSec=3.535776
+LogCookStats: Display:     TagPackageExportsPresaveTimeSec=0.000000
+LogCookStats: Display:     TagPackageExportsTimeSec=0.000000
+LogCookStats: Display:     FullyLoadLoadersTimeSec=0.000000
+LogCookStats: Display:     ResetLoadersTimeSec=0.000000
+LogCookStats: Display:     TagPackageExportsGetObjectsWithOuter=0.000000
+LogCookStats: Display:     TagPackageExportsGetObjectsWithMarks=0.000000
+LogCookStats: Display:     SerializeImportsTimeSec=0.000000
+LogCookStats: Display:     SortExportsSeekfreeInnerTimeSec=0.000000
+LogCookStats: Display:     SerializeExportsTimeSec=0.000000
+LogCookStats: Display:     SerializeBulkDataTimeSec=0.004597
+LogCookStats: Display:     AsyncWriteTimeSec=0.000000
+LogCookStats: Display:     MBWritten=0.000000
+LogCookStats: Display: Package.DifferentPackagesSizeMBPerAsset
+LogCookStats: Display: Package.NumberOfDifferencesInPackagesPerAsset
+LogCookStats: Display: Package.PackageDifferencesSizeMBPerAsset
+LogCookStats: Display: Package.DiffTotal
+LogCookStats: Display:     NumberOfDifferentPackages=0
+LogCookStats: Display:     DifferentPackagesSizeMB=0.000000
+LogCookStats: Display:     NumberOfDifferencesInPackages=0
+LogCookStats: Display:     PackageDifferencesSizeMB=0.000000
+LogCookStats: Display: UnversionedProperties
+LogCookStats: Display:     SavedStructs=0
+LogCookStats: Display:     SavedMB=0
+LogCookStats: Display:     EquivalentTaggedMB=0
+LogCookStats: Display:     CompressionRatio=-nan(ind)
+LogCookStats: Display:     BitfieldWasteKB=0
+LogCookStats: Display:
+LogCookStats: Display: Cook Profile
+LogCookStats: Display: ============
+LogCookStats: Display:  0.CookWallTimeSec=46.005429
+LogCookStats: Display:  0. 0.StartupWallTimeSec=19.355158
+LogCookStats: Display:  0. 1.CookProcessingTime=26.650272
+LogCookStats: Display:  0. 1. 1.StartCookByTheBookTimeSec=4.807774
+LogCookStats: Display:  0. 1. 1. 0.BlockOnAssetRegistryTimeSec=1.098239
+LogCookStats: Display:  0. 1. 1. 1.GameCookModificationDelegateTimeSec=0.000023
+LogCookStats: Display:  0. 1. 2.TickCookOnTheSideTimeSec=0.213598
+LogCookStats: Display:  0. 1. 2. 0.TickCookOnTheSideLoadPackagesTimeSec=1.697433
+LogCookStats: Display:  0. 1. 2. 1.TickCookOnTheSideSaveCookedPackageTimeSec=4.345336
+LogCookStats: Display:  0. 1. 2. 1. 0.TickCookOnTheSideResolveRedirectorsTimeSec=0.000000
+LogCookStats: Display:  0. 1. 2. 2.TickCookOnTheSidePrepareSaveTimeSec=5.462672
+LogCookStats: Display:  0. 1. 3.TickLoopGCTimeSec=0.049160
+LogCookStats: Display:  0. 1. 4.TickLoopRecompileShaderRequestsTimeSec=0.000000
+LogCookStats: Display:  0. 1. 5.TickLoopShaderProcessAsyncResultsTimeSec=0.000014
+LogCookStats: Display:  0. 1. 6.TickLoopProcessDeferredCommandsTimeSec=0.000004
+LogCookStats: Display:  0. 1. 7.TickLoopTickCommandletStatsTimeSec=0.000001
+LogCookStats: Display:  0. 1. 8.TickLoopFlushRenderingCommandsTimeSec=0.005213
+LogCookStats: Display:  0. 1. 9.ShaderFlushTimeSec=0.000000
+LogCookStats: Display:  0. 1. 10.ValidationTimeSec=0.000134
+LogCookStats: Display:
+LogCookStats: Display: DDC Summary Stats
+LogCookStats: Display: =================
+LogCookStats: Display: BackEnd         = Installed
+LogCookStats: Display: HasLocalCache   =      true
+LogCookStats: Display: HasSharedCache  =     false
+LogCookStats: Display: HasCloudCache   =     false
+LogCookStats: Display: HasZenCache     =      true
+LogCookStats: Display: TotalGetHits    =      6365
+LogCookStats: Display: TotalGetMisses  =      3416
+LogCookStats: Display: TotalGets       =      9781
+LogCookStats: Display: TotalGetHitPct  =  0.650751
+LogCookStats: Display: GetMissPct      =  0.349249
+LogCookStats: Display: TotalPutHits    =      3275
+LogCookStats: Display: TotalPutMisses  =         0
+LogCookStats: Display: TotalPuts       =      3275
+LogCookStats: Display: TotalPutHitPct  =  1.000000
+LogCookStats: Display: PutMissPct      =  0.000000
+LogCookStats: Display: LocalGetHits    =      3278
+LogCookStats: Display: LocalGetMisses  =      3416
+LogCookStats: Display: LocalGetTotal   =      6694
+LogCookStats: Display: LocalGetHitPct  =  0.489692
+LogCookStats: Display: SharedGetHits   =         0
+LogCookStats: Display: SharedGetTotal  =         0
+LogCookStats: Display: SharedGetHitPct =  0.000000
+LogCookStats: Display: ZenLocalGetHits =      3278
+LogCookStats: Display: ZenLocalGetTotal=      6694
+LogCookStats: Display: ZenLocalGetHitPct=  0.489692
+LogCookStats: Display: ZenRemoteGetHits=         0
+LogCookStats: Display: ZenRemoteGetTotal=         0
+LogCookStats: Display: ZenRemoteGetHitPct=  0.000000
+LogCookStats: Display: ZenRemoteReadSpeed=  0.000000
+LogCookStats: Display: ZenRemoteWriteSpeed=  0.000000
+LogCookStats: Display: ZenRemoteLatency=  0.000000
+LogCookStats: Display: CloudGetHits    =         0
+LogCookStats: Display: CloudGetTotal   =         0
+LogCookStats: Display: CloudGetHitPct  =  0.000000
+LogCookStats: Display: LocalLatency    =  0.249849
+LogCookStats: Display: LocalReadSpeed  = 28.678540
+LogCookStats: Display: LocalWriteSpeed =  0.804088
+LogCookStats: Display: SharedLatency   =  0.000000
+LogCookStats: Display: SharedReadSpeed =  0.000000
+LogCookStats: Display: SharedWriteSpeed=  0.000000
+LogCookStats: Display: CloudLatency    =  0.000000
+LogCookStats: Display: CloudReadSpeed  =  0.000000
+LogCookStats: Display: CloudWriteSpeed =  0.000000
+LogCookStats: Display:
+LogCookStats: Display: DDC Resource Stats
+LogCookStats: Display: =======================================================================================================
+LogCookStats: Display: Asset Type                          Total Time (Sec)  GameThread Time (Sec)  Assets Built  MB Processed
+LogCookStats: Display: ----------------------------------  ----------------  ---------------------  ------------  ------------
+LogCookStats: Display: BulkDataList                                   21.97                   0.00          3114          0.05
+LogCookStats: Display: Texture                                        10.93                   0.00             0         89.85
+LogCookStats: Display: Shader                                          1.91                   0.00            13          7.69
+LogCookStats: Display: MaterialShader                                  1.61                   0.28           108          0.95
+LogCookStats: Display: GlobalShader                                    1.31                   1.31             0         11.85
+LogCookStats: Display: StaticMesh                                      0.68                   0.00             0          1.88
+LogCookStats: Display: CardRepresentation                              0.58                   0.00             0          0.07
+LogCookStats: Display: NavCollision                                    0.43                   0.00             0          0.06
+LogCookStats: Display: MaterialTranslation                             0.35                   0.00            40          0.00
+LogCookStats: Display: STREAMEDAUDIO                                   0.02                   0.00             0          0.09
+LogCookStats: Display: Audio                                           0.01                   0.00             0          0.08
+LogCookStats: Display: BodySetup                                       0.00                   0.00             0          0.31
+LogCookStats: Display: CKERSM                                          0.00                   0.00             0          0.05
+LogCookStats: Display:
+LogCookStats: Display: Accumulated DDC Resource Stats Per Asset Type
+LogCookStats: Display: =======================================================================================================
+LogCookStats: Display: AnimationSequence                               0.00                   0.00             0          0.00
+LogCookStats: Display: Audio                                           0.01                   0.00             0          0.08
+LogCookStats: Display: CardRepresentation                              0.58                   0.00             0          0.07
+LogCookStats: Display: DistanceField                                   0.00                   0.00             0          0.00
+LogCookStats: Display: MaterialShader                                  1.61                   0.28           108          0.95
+LogCookStats: Display: MaterialTranslation                             0.35                   0.00            40          0.00
+LogCookStats: Display: NiagaraScript                                   0.00                   0.00             0          0.00
+LogCookStats: Display: SkeletalMesh                                    0.00                   0.00             0          0.00
+LogCookStats: Display: StaticMesh                                      0.68                   0.00             0          1.88
+LogCookStats: Display: Texture                                        10.93                   0.00             0         89.85
+LogCookStats: Display: Other                                          25.64                   1.31          3127         20.09
+LogPackageBuildDependencyTracker: Display: Package Accesses (584 referencing packages with a total of 6494 unique accesses)
+LogConfigBuildDependencyTracker: Display: Config Accesses (375 referencing packages with a total of 934 unique accesses). 1751 unique accesses that were not associated with a package.
+LogCook: Display: ---- Finalisation: End ----
+LogCook: Display: Done!
+LogSavePackage: Display: Took 0.002358s to verify the EDL loading graph.
+LogInit: Display:
+LogInit: Display: Warning/Error Summary (Unique only)
+LogInit: Display: -----------------------------------
+LogInit: Display: LogAbilitySystem: Warning: No GameplayCueNotifyPaths were specified in DefaultGame.ini under [/Script/GameplayAbilities.AbilitySystemGlobals]. Falling back to using all of /Game/. This may be slow on large projects. Consider specifying which paths are to be searched.
+LogInit: Display: PIE: Warning: AttachTo: '/Game/WhiteTreeForest.WhiteTreeForest:PersistentLevel.TdfMapBuilder_UAID_E0D55EDFC383CEEB02_1738419912.Root' is not static , cannot attach '/Game/WhiteTreeForest.WhiteTreeForest:PersistentLevel.TdfMapBuilder_UAID_E0D55EDFC383CEEB02_1738419912.WaterISM' which is static to it. Aborting.
+LogInit: Display: PIE: Warning: AttachTo: '/Game/WhiteTreeForest.WhiteTreeForest:PersistentLevel.TdfMapBuilder_UAID_E0D55EDFC383CEEB02_1738419912.Root' is not static , cannot attach '/Game/WhiteTreeForest.WhiteTreeForest:PersistentLevel.TdfMapBuilder_UAID_E0D55EDFC383CEEB02_1738419912.MarkerISM' which is static to it. Aborting.
+LogInit: Display: PIE: Warning: AttachTo: '/Game/WhiteTreeForest.WhiteTreeForest:PersistentLevel.TdfMapBuilder_UAID_E0D55EDFC383CEEB02_1738419912.Root' is not static , cannot attach '/Game/WhiteTreeForest.WhiteTreeForest:PersistentLevel.TdfMapBuilder_UAID_E0D55EDFC383CEEB02_1738419912.FurnitureISM' which is static to it. Aborting.
+LogInit: Display: PIE: Warning: AttachTo: '/Game/BearCampus.BearCampus:PersistentLevel.TdfMapBuilder_Forest_UAID_E0D55EDFC3831CEC02_1596128640.Root' is not static , cannot attach '/Game/BearCampus.BearCampus:PersistentLevel.TdfMapBuilder_Forest_UAID_E0D55EDFC3831CEC02_1596128640.FurnitureISM' which is static to it. Aborting.
+LogInit: Display: PIE: Warning: AttachTo: '/Game/WonderPond.WonderPond:PersistentLevel.TdfMapBuilder_Waddon_UAID_E0D55EDFC383FCEB02_1100742007.Root' is not static , cannot attach '/Game/WonderPond.WonderPond:PersistentLevel.TdfMapBuilder_Waddon_UAID_E0D55EDFC383FCEB02_1100742007.WaterISM' which is static to it. Aborting.
+LogInit: Display: PIE: Warning: AttachTo: '/Game/WonderPond.WonderPond:PersistentLevel.TdfMapBuilder_Waddon_UAID_E0D55EDFC383FCEB02_1100742007.Root' is not static , cannot attach '/Game/WonderPond.WonderPond:PersistentLevel.TdfMapBuilder_Waddon_UAID_E0D55EDFC383FCEB02_1100742007.MarkerISM' which is static to it. Aborting.
+LogInit: Display: PIE: Warning: AttachTo: '/Game/WonderPond.WonderPond:PersistentLevel.TdfMapBuilder_Waddon_UAID_E0D55EDFC383FCEB02_1100742007.Root' is not static , cannot attach '/Game/WonderPond.WonderPond:PersistentLevel.TdfMapBuilder_Waddon_UAID_E0D55EDFC383FCEB02_1100742007.FurnitureISM' which is static to it. Aborting.
+LogInit: Display:
+LogInit: Display: Success - 0 error(s), 8 warning(s)
+LogInit: Display:
+
+Execution of commandlet took:  26.66 seconds, PeakPhysMemoryMB=2734 MB, PeakVirtMemoryMB=2543 MB
+LogToolsetRegistry: Display: Unregistering Toolset ToolsetRegistry.AgentSkillToolset
+LogAssetRegistry: Display: CleanupOrphanedCacheFiles (PostWrite): 1 .ref files found, 1 referenced binaries
+LogAssetRegistry: Display:   CachedAssetRegistry_0_37BB4C7A48671E81399F0DA7DC3B7504.bin: delete failed (orphaned but still in use)
+LogAssetRegistry: Display: CleanupOrphanedCacheFiles: 2 total binaries, 1 referenced (kept), 0 old-style pre-migration (kept), 0 orphans deleted, 1 orphans locked (kept)
+LogStreaming: Display: ============ Loader Stats ============
+LogStreaming: Display: Unique Partial Flushes: 0
+LogStreaming: Display: ============ Loader Stats End ============
+LogShaderCompilers: Display: Exiting ShaderCompilingThread
+Took 50.18s to run UnrealEditor-Cmd.exe, ExitCode=0
+Cook command time: 50.24 s
+********** COOK COMMAND COMPLETED **********
+********** STAGE COMMAND STARTED **********
+Creating Staging Manifest...
+Patching bootstrap executable; D:\NSA Unreal Engine\New Folder For Migration\Intermediate\Staging\TheDheerFather.exe
+Begin update resource 'D:\NSA Unreal Engine\New Folder For Migration\Intermediate\Staging\TheDheerFather.exe' (0)
+Add resource 101, length 104 (True)
+Add resource 1, length 1996 (True)
+Add resource 2, length 2447 (True)
+Add resource 3, length 2535 (True)
+Add resource 4, length 3037 (True)
+Add resource 5, length 3244 (True)
+Add resource 6, length 3531 (True)
+Add resource 7, length 6931 (True)
+Add resource 201, length 98 (True)
+Add resource 202, length 30 (True)
+Add resource 205, length 2 (True)
+End update resource (True/0)
+Excluding config file D:\Program Files 2\UE_5.8\Engine\Config\Localization\WordCount.ini
+Excluding config file D:\Program Files 2\UE_5.8\Engine\Config\BaseLightmass.ini
+Excluding config file D:\Program Files 2\UE_5.8\Engine\Config\BasePakFileRules.ini
+Excluding config file D:\Program Files 2\UE_5.8\Engine\Config\BaseEditor.ini
+Excluding config file D:\Program Files 2\UE_5.8\Engine\Config\BaseEditorKeyBindings.ini
+Excluding config file D:\Program Files 2\UE_5.8\Engine\Config\Localization\Category.ini
+Excluding config file D:\Program Files 2\UE_5.8\Engine\Config\Localization\Editor.ini
+Excluding config file D:\Program Files 2\UE_5.8\Engine\Config\Localization\PortableObjectExport.ini
+Excluding config file D:\Program Files 2\UE_5.8\Engine\Config\Localization\PortableObjectImport.ini
+Excluding config file D:\Program Files 2\UE_5.8\Engine\Config\Localization\PropertyNames.ini
+Excluding config file D:\Program Files 2\UE_5.8\Engine\Config\Localization\RepairData.ini
+Excluding config file D:\Program Files 2\UE_5.8\Engine\Config\BaseSourceControlSettings.ini
+Excluding config file D:\Program Files 2\UE_5.8\Engine\Config\BaseUnrealInsightsSettings.ini
+Excluding config file D:\Program Files 2\UE_5.8\Engine\Config\BaseEditorSettings.ini
+Excluding config file D:\Program Files 2\UE_5.8\Engine\Config\BaseEditorPerProjectUserSettings.ini
+Excluding config file D:\Program Files 2\UE_5.8\Engine\Config\Localization\Engine.ini
+Excluding config file D:\Program Files 2\UE_5.8\Engine\Config\Localization\Keywords.ini
+Excluding config file D:\Program Files 2\UE_5.8\Engine\Config\Windows\WindowsEditorPerProjectUserSettings.ini
+Excluding config file D:\Program Files 2\UE_5.8\Engine\Config\Windows\WindowsEditorSettings.ini
+Excluding config file D:\Program Files 2\UE_5.8\Engine\Config\Localization\ToolTips.ini
+Including config file D:\Program Files 2\UE_5.8\Engine\Config\BaseInput.ini
+Including config file D:\Program Files 2\UE_5.8\Engine\Config\BaseHardware.ini
+Including config file D:\Program Files 2\UE_5.8\Engine\Config\BaseGameUserSettings.ini
+Including config file D:\Program Files 2\UE_5.8\Engine\Config\BaseGame.ini
+Including config file D:\Program Files 2\UE_5.8\Engine\Config\BaseEngine.ini
+Including config file D:\Program Files 2\UE_5.8\Engine\Config\Layouts\DefaultLayout.ini
+Including config file D:\Program Files 2\UE_5.8\Engine\Config\PluginBase.ini
+Including config file D:\Program Files 2\UE_5.8\Engine\Config\ConsoleVariables.ini
+Including config file D:\Program Files 2\UE_5.8\Engine\Config\ConfigRedirects.ini
+Including config file D:\Program Files 2\UE_5.8\Engine\Config\Windows\BaseWindowsInput.ini
+Including config file D:\Program Files 2\UE_5.8\Engine\Config\Windows\BaseWindowsGame.ini
+Including config file D:\Program Files 2\UE_5.8\Engine\Config\Windows\BaseWindowsEngine.ini
+Including config file D:\Program Files 2\UE_5.8\Engine\Config\VulkanPC\DataDrivenPlatformInfo.ini
+Including config file D:\Program Files 2\UE_5.8\Engine\Config\BaseScalability.ini
+Including config file D:\Program Files 2\UE_5.8\Engine\Config\BaseRuntimeOptions.ini
+Including config file D:\Program Files 2\UE_5.8\Engine\Config\BaseMaterialExpressions.ini
+Including config file D:\Program Files 2\UE_5.8\Engine\Config\BaseInstallBundle.ini
+Including config file D:\Program Files 2\UE_5.8\Engine\Config\BaseDeviceProfiles.ini
+Including config file D:\Program Files 2\UE_5.8\Engine\Config\BaseCompat.ini
+Including config file D:\Program Files 2\UE_5.8\Engine\Config\Base.ini
+Including config file D:\Program Files 2\UE_5.8\Engine\Config\Layouts\UE4ClassicLayout.ini
+Including config file D:\Program Files 2\UE_5.8\Engine\Config\Windows\WindowsInput.ini
+Including config file D:\Program Files 2\UE_5.8\Engine\Config\Windows\WindowsGame.ini
+Including config file D:\Program Files 2\UE_5.8\Engine\Config\Windows\DataDrivenPlatformInfo.ini
+Including config file D:\NSA Unreal Engine\New Folder For Migration\Config\DefaultInput.ini
+Including config file D:\NSA Unreal Engine\New Folder For Migration\Config\DefaultGameplayTags.ini
+Including config file D:\NSA Unreal Engine\New Folder For Migration\Config\DefaultGame.ini
+Including config file D:\NSA Unreal Engine\New Folder For Migration\Config\DefaultEngine.ini
+Reading oplog from Zen...
+Running UnrealPak with arguments: "D:\NSA Unreal Engine\New Folder For Migration\TheDheerFather.uproject" IoStore -StartZenServerForStage -SponsorProcessID=24712 -ProjectStore="D:\NSA Unreal Engine\New Folder For Migration\Saved\Cooked\Windows\ue.projectstore" -unattended
+Running: D:\Program Files 2\UE_5.8\Engine\Binaries\Win64\UnrealPak.exe "D:\NSA Unreal Engine\New Folder For Migration\TheDheerFather.uproject" IoStore -StartZenServerForStage -SponsorProcessID=24712 -ProjectStore="D:\NSA Unreal Engine\New Folder For Migration\Saved\Cooked\Windows\ue.projectstore" -unattended
+LogStreaming: Display: AsyncLoading2 - Created: Async Loading Thread: false, Async Post Load: false, Multithreaded: false
+LogPakFile: Display: ProjectDir: ../../../../../NSA Unreal Engine/New Folder For Migration/
+LogIoStore: Display: ==================== IoStore Utils ====================
+LogIoStore: Display: Using command line for crypto configuration
+LogZenServiceInstance: Display: Launching zen utility 'D:/Program Files 2/UE_5.8/Engine/Binaries/Win64/zen.exe service status'.
+LogZenServiceInstance: Display: Writing plugin version info to 'C:/Users/RedIce/AppData/Local/UnrealEngine/Common/Zen/Install/zen_plugin_versions.json'
+LogZenServiceInstance: Display: Read zen version cache file from 'C:/Users/RedIce/AppData/Local/UnrealEngine/5.8/Saved/Zen/zen.version', version: '5.8.13-202605190912-windows-x64-release-094f62c2'
+LogZenServiceInstance: Display: Read zen version cache file from 'C:/Users/RedIce/AppData/Local/UnrealEngine/Common/Zen/Install/zen.version', version: '5.8.13-202605190912-windows-x64-release-094f62c2'
+LogZenServiceInstance: Display: Installed service at 'C:/Users/RedIce/AppData/Local/UnrealEngine/Common/Zen/Install/zenserver.exe' is up to date
+LogZenServiceInstance: Display: Launching executable 'C:/Users/RedIce/AppData/Local/UnrealEngine/Common/Zen/Install/zenserver.exe', working dir 'C:/Users/RedIce/AppData/Local/UnrealEngine/Common/Zen/Install', data dir 'C:/Users/RedIce/AppData/Local/UnrealEngine/Common/Zen/Data', args '--port 8558 --data-dir C:\Users\RedIce\AppData\Local\UnrealEngine\Common\Zen\Data --http asio --gc-cache-duration-seconds 1209600 --gc-interval-seconds 21600 --gc-low-diskspace-threshold 2147483648 --cache-bucket-limit-overwrites --quiet --restrict-content-types --allow-external-oidctoken-exe=false --plugins-config "C:/Users/RedIce/AppData/Local/UnrealEngine/Common/Zen/Install/zen_plugins_v1.json" --security-config-path "C:/Users/RedIce/AppData/Local/UnrealEngine/Common/Zen/Install/security-config.json" --owner-pid 20556  --child-id Zen_20556_Startup'
+LogZenServiceInstance: Display: Unreal Zen Storage Server HTTP service at http://[::1]:8558 status: OK!.
+LogZenServiceInstance: Display: Unreal Zen Storage Server HTTP service at http://[::1]:8558 status: OK!.
+LogPakFile: Display: UnrealPak executed in 2.699926 seconds
+Took 3.66s to run UnrealPak.exe, ExitCode=0
+Reading oplog from http://[::1]:8558/prj/TheDheerFather.98263f62/oplog/Windows/entries?trim_by_referencedset=true
+Parsed 582 package entries from oplog.
+Cleaning Stage Directory: D:\NSA Unreal Engine\New Folder For Migration\Saved\StagedBuilds\Windows
+Creating pak using staging manifest.
+DumpManifest: C:\Users\RedIce\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+Program+Files+2+UE_5.8\PrePak_Windows_NonUFSFiles.txt, NumItems: 34
+DumpManifest: C:\Users\RedIce\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+Program+Files+2+UE_5.8\PrePak_Windows_NonUFSFilesDebug.txt, NumItems: 6
+DumpManifest: C:\Users\RedIce\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+Program+Files+2+UE_5.8\PrePak_Windows_UFSFiles.txt, NumItems: 2431
+No matching platform for PakFileRules for Section ExcludeContentForMobile : Windows
+Using 0 pak order files:
+Running UnrealPak with arguments: "D:\NSA Unreal Engine\New Folder For Migration\TheDheerFather.uproject"  -cryptokeys="D:\NSA Unreal Engine\New Folder For Migration\Saved\Cooked\Windows\TheDheerFather\Metadata\Crypto.json" -unattended -patchpaddingalign=2048 -compressionformats=Oodle -compresslevel=4 -compressmethod=Kraken  -ProjectStore="D:\NSA Unreal Engine\New Folder For Migration\Saved\Cooked\Windows\ue.projectstore" -platform=Windows  -CreateMultiple="C:\Users\RedIce\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+Program+Files+2+UE_5.8\PakCommands.txt"
+Running: D:\Program Files 2\UE_5.8\Engine\Binaries\Win64\UnrealPak.exe "D:\NSA Unreal Engine\New Folder For Migration\TheDheerFather.uproject"  -cryptokeys="D:\NSA Unreal Engine\New Folder For Migration\Saved\Cooked\Windows\TheDheerFather\Metadata\Crypto.json" -unattended -patchpaddingalign=2048 -compressionformats=Oodle -compresslevel=4 -compressmethod=Kraken  -ProjectStore="D:\NSA Unreal Engine\New Folder For Migration\Saved\Cooked\Windows\ue.projectstore" -platform=Windows  -CreateMultiple="C:\Users\RedIce\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+Program+Files+2+UE_5.8\PakCommands.txt"
+OodleDataCompression: Display: Oodle v2.9.16 format for pak/iostore with method=Kraken, level=4=Normal
+LogStreaming: Display: AsyncLoading2 - Created: Async Loading Thread: false, Async Post Load: false, Multithreaded: false
+LogPakFile: Display: ProjectDir: ../../../../../NSA Unreal Engine/New Folder For Migration/
+LogPakFile: Display: Parsing crypto keys from a crypto key cache file
+LogPakFile: Display: CompressionFormats in priority order: Oodle, Zlib
+LogZenServiceInstance: Display: Launching zen utility 'D:/Program Files 2/UE_5.8/Engine/Binaries/Win64/zen.exe service status'.
+LogZenServiceInstance: Display: Writing plugin version info to 'C:/Users/RedIce/AppData/Local/UnrealEngine/Common/Zen/Install/zen_plugin_versions.json'
+LogZenServiceInstance: Display: Read zen version cache file from 'C:/Users/RedIce/AppData/Local/UnrealEngine/5.8/Saved/Zen/zen.version', version: '5.8.13-202605190912-windows-x64-release-094f62c2'
+LogZenServiceInstance: Display: Read zen version cache file from 'C:/Users/RedIce/AppData/Local/UnrealEngine/Common/Zen/Install/zen.version', version: '5.8.13-202605190912-windows-x64-release-094f62c2'
+LogZenServiceInstance: Display: Installed service at 'C:/Users/RedIce/AppData/Local/UnrealEngine/Common/Zen/Install/zenserver.exe' is up to date
+LogZenServiceInstance: Display: Unreal Zen Storage Server HTTP service at http://[::1]:8558 status: OK!.
+LogZenStore: Display: Opening oplog TheDheerFather.98263f62 / Windows
+LogIoStore: Display: Fetched 583 oplog items from Zen in 1.18 seconds
+LogIoStore: Display: Parsed 583 oplog items 0.01 seconds, 3540 chunks
+LogIoStore: Display: Loaded 688 chunk hashes from Zen in 0.01 seconds, 688 hashes updated in 0.00 seconds
+LogPakFile: Display: Oodle enabled on 'NoPluginCompression' files
+LogPakFile: Display: Loading response file D:\Program Files 2\UE_5.8\Engine\Programs\AutomationTool\Saved\ResponseFiles\PakList_TheDheerFather-Windows.txt
+LogPakFile: Display: Added 1741 entries to add to pak file.
+LogPakFile: Display: Collecting files to add to pak file...
+LogPakFile: Display: Collected 1741 files in 0.01s.
+LogPakFile: Display: Creating pak D:/NSA Unreal Engine/New Folder For Migration/Saved/StagedBuilds/Windows/TheDheerFather/Content/Paks/TheDheerFather-Windows.pak.
+LogPakFile: Display: Created pak file: D:/NSA Unreal Engine/New Folder For Migration/Saved/StagedBuilds/Windows/TheDheerFather/Content/Paks/TheDheerFather-Windows.pak
+LogPakFile: Display: CompressionFormat 0 [Oodle] : 397 files, 24039918 -> 9201646 bytes
+LogPakFile: Display: CompressionFormat 2 [None] : 1344 files, 788179 -> 788179 bytes
+LogPakFile: Display: Added 1741 files, 10654778 bytes total
+LogPakFile: Display: PrimaryIndex size: 23970 bytes
+LogPakFile: Display: PathHashIndex size: 54932 bytes
+LogPakFile: Display: FullDirectoryIndex size: 58005 bytes
+LogPakFile: Display: Compression summary: 38.28% of original size. Compressed Size 9201646 bytes, Original Size 24039918 bytes.
+LogPakFile: Display: Encryption - DISABLED
+LogPakFile: Display:
+LogPakFile: Display: Writer and Compression Threads exited.
+LogPakFile: Display: UnrealPak executed in 2.408291 seconds
+Took 2.65s to run UnrealPak.exe, ExitCode=0
+Running UnrealPak with arguments: "D:\NSA Unreal Engine\New Folder For Migration\TheDheerFather.uproject" D:\NSA Unreal Engine\New Folder For Migration\TheDheerFather.uproject -CreateGlobalContainer="D:\NSA Unreal Engine\New Folder For Migration\Saved\StagedBuilds\Windows\TheDheerFather\Content\Paks\global.utoc" -ProjectStore="D:\NSA Unreal Engine\New Folder For Migration\Saved\Cooked\Windows\ue.projectstore" -CookedDirectory="D:\NSA Unreal Engine\New Folder For Migration\Saved\Cooked\Windows" -Commands="C:\Users\RedIce\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+Program+Files+2+UE_5.8\IoStoreCommands.txt" -patchpaddingalign=2048 -compressionformats=Oodle -compresslevel=4 -compressmethod=Kraken   -cryptokeys="D:\NSA Unreal Engine\New Folder For Migration\Saved\Cooked\Windows\TheDheerFather\Metadata\Crypto.json" -compressionMinBytesSaved=1024 -compressionMinPercentSaved=5 -WriteBackMetadataToAssetRegistry=Disabled -platform=Windows  -unattended
+Running: D:\Program Files 2\UE_5.8\Engine\Binaries\Win64\UnrealPak.exe "D:\NSA Unreal Engine\New Folder For Migration\TheDheerFather.uproject" D:\NSA Unreal Engine\New Folder For Migration\TheDheerFather.uproject -CreateGlobalContainer="D:\NSA Unreal Engine\New Folder For Migration\Saved\StagedBuilds\Windows\TheDheerFather\Content\Paks\global.utoc" -ProjectStore="D:\NSA Unreal Engine\New Folder For Migration\Saved\Cooked\Windows\ue.projectstore" -CookedDirectory="D:\NSA Unreal Engine\New Folder For Migration\Saved\Cooked\Windows" -Commands="C:\Users\RedIce\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+Program+Files+2+UE_5.8\IoStoreCommands.txt" -patchpaddingalign=2048 -compressionformats=Oodle -compresslevel=4 -compressmethod=Kraken   -cryptokeys="D:\NSA Unreal Engine\New Folder For Migration\Saved\Cooked\Windows\TheDheerFather\Metadata\Crypto.json" -compressionMinBytesSaved=1024 -compressionMinPercentSaved=5 -WriteBackMetadataToAssetRegistry=Disabled -platform=Windows  -unattended
+OodleDataCompression: Display: Oodle v2.9.16 format for pak/iostore with method=Kraken, level=4=Normal
+LogStreaming: Display: AsyncLoading2 - Created: Async Loading Thread: false, Async Post Load: false, Multithreaded: false
+LogPakFile: Display: ProjectDir: ../../../../../NSA Unreal Engine/New Folder For Migration/
+LogIoStore: Display: ==================== IoStore Utils ====================
+LogIoStore: Display: Parsing crypto keys from a crypto key cache file 'D:\NSA Unreal Engine\New Folder For Migration\Saved\Cooked\Windows\TheDheerFather\Metadata\Crypto.json'
+LogIoStore: Display: Container signing - DISABLED
+LogIoStore: Display: Directory index - ENABLED
+LogIoStore: Display: Using compression format 'Oodle'
+LogConfig: Display: Read in platform Windows ini files took 0.03 seconds
+LogIoStore: Display: Using memory mapping alignment '16384'
+LogIoStore: Display: Using compression block size '65536'
+LogIoStore: Display: Using compression block alignment '2048'
+LogIoStore: Display: Using compression min bytes saved '1024'
+LogIoStore: Display: Using compression min percent saved '5'
+LogIoStore: Display: Using max partition size '0'
+LogIoStore: Display: Not using DDC for compression
+LogIoStore: Display: Container metadata disabled
+LogIoStore: Display: Using command list file: 'C:\Users\RedIce\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+Program+Files+2+UE_5.8\IoStoreCommands.txt'
+LogIoStore: Display: Selected Oodle level 4 (Normal) from command line for shaders
+LogZenServiceInstance: Display: Launching zen utility 'D:/Program Files 2/UE_5.8/Engine/Binaries/Win64/zen.exe service status'.
+LogZenServiceInstance: Display: Writing plugin version info to 'C:/Users/RedIce/AppData/Local/UnrealEngine/Common/Zen/Install/zen_plugin_versions.json'
+LogZenServiceInstance: Display: Read zen version cache file from 'C:/Users/RedIce/AppData/Local/UnrealEngine/5.8/Saved/Zen/zen.version', version: '5.8.13-202605190912-windows-x64-release-094f62c2'
+LogZenServiceInstance: Display: Read zen version cache file from 'C:/Users/RedIce/AppData/Local/UnrealEngine/Common/Zen/Install/zen.version', version: '5.8.13-202605190912-windows-x64-release-094f62c2'
+LogZenServiceInstance: Display: Installed service at 'C:/Users/RedIce/AppData/Local/UnrealEngine/Common/Zen/Install/zenserver.exe' is up to date
+LogZenServiceInstance: Display: Unreal Zen Storage Server HTTP service at http://[::1]:8558 status: OK!.
+LogZenStore: Display: Opening oplog TheDheerFather.98263f62 / Windows
+LogIoStore: Display: Fetched 583 oplog items from Zen in 0.56 seconds
+LogIoStore: Display: Parsed 583 oplog items 0.01 seconds, 3540 chunks
+LogIoStore: Display: Loaded 688 chunk hashes from Zen in 0.01 seconds, 688 hashes updated in 0.00 seconds
+LogIoStore: Display: Searching for cooked assets in folder 'D:\NSA Unreal Engine\New Folder For Migration\Saved\Cooked\Windows'
+LogIoStore: Display: Found '4' files
+LogIoStore: Display: Creating container targets...
+LogIoStore: Display: Processing shader libraries, compressing with Oodle Mermaid, level 4 (Normal)
+LogIoStore: Display: Shader library chunk override is disabled
+LogShaderLibrary: Display: Created IoStoreShaderArchive header: shaders grouped in 179 groups (76 of them didn't need new indices), average uncompressed size 92769 bytes, min 502 bytes, max 971733 bytes (r.ShaderCodeLibrary.MaxShaderGroupSize=1048576)
+LogIoStore: Display: TheDheerFather-PCD3D_SM5(PCD3D_SM5): Recompressed 1361 shaders as 179 groups. Library size changed from 4488 KB (3.61 : 1 ratio) to 1892 KB (8.57 : 1 ratio), 42.17% of previous.
+LogIoStore: Display: Save IoStoreShaderCodeArchive 'TheDheerFather-PCD3D_SM5-PCD3D_SM5' with ChunkId '026bd52b198e9aff00000008' for target file 'D:/NSA Unreal Engine/New Folder For Migration/Saved/Cooked/Windows/TheDheerFather/Content/ShaderArchive-TheDheerFather-PCD3D_SM5-PCD3D_SM5.ushaderbytecode'
+LogShaderLibrary: Display: Created IoStoreShaderArchive header: shaders grouped in 382 groups (158 of them didn't need new indices), average uncompressed size 141054 bytes, min 249 bytes, max 1038208 bytes (r.ShaderCodeLibrary.MaxShaderGroupSize=1048576)
+LogIoStore: Display: Global-PCD3D_SM5(PCD3D_SM5): Recompressed 3926 shaders as 382 groups. Library size changed from 11883 KB (4.43 : 1 ratio) to 5218 KB (10.08 : 1 ratio), 43.91% of previous.
+LogIoStore: Display: Save IoStoreShaderCodeArchive 'Global-PCD3D_SM5-PCD3D_SM5' with ChunkId 'c3fad98e7ca0cc3100000008' for target file 'D:/NSA Unreal Engine/New Folder For Migration/Saved/Cooked/Windows/TheDheerFather/Content/ShaderArchive-Global-PCD3D_SM5-PCD3D_SM5.ushaderbytecode'
+LogIoStore: Display: Shaders processed in 0.14 seconds
+LogIoStore: Display: Initialized WriteRequestManager with MaxConcurrentSourceReads=4 (8 cores), MaxSourceBufferMemory=3072MiB
+LogIoStore: Display: Processing redirects...
+LogIoStore: Display: Creating disk layout...
+LogIoStore: Display: Ordered 580 packages using fallback bundle order
+LogIoStore: Display: Disabled WriteRequestManager memory throttling, MaxConcurrentSourceReads=4 (8 cores)
+LogIoStore: Display: Writing container(s)...
+LogIoStore: Display: Writing and compressing took 0.75 seconds, writes to disk took 0.09 seconds for 198,304,608 bytes @ 2,270,846,331 bytes per second.
+LogIoStore: Display: global: Found perfect hashmap for 1 items.
+LogIoStore: Display: TheDheerFather-Windows: Found perfect hashmap for 1252 items.
+LogIoStore: Display: Finalize took 0.0 seconds for 2 writers to write 185,282 bytes, 55,095,874 bytes per second
+LogIoStore: Display: Writing tocs... [Physical: 492 MiB, Virtual: 3200 MiB]
+LogIoStore: Display: 688 / 1,253 hashes were loaded from the hash database, by type:
+LogIoStore: Display:     ExportBundleData           580
+LogIoStore: Display:     BulkData                   108
+LogIoStore: Display: 688 / 1,253 chunks attempted to compress, by type:
+LogIoStore: Display:     ExportBundleData           580 / 580
+LogIoStore: Display:     BulkData                   108 / 108
+LogIoStore: Display:     ScriptObjects              0 / 1
+LogIoStore: Display:     ContainerHeader            0 / 1
+LogIoStore: Display:     ShaderCodeLibrary          0 / 2
+LogIoStore: Display:     ShaderCode                 0 / 561
+LogIoStore: Display: Source bytes read:
+LogIoStore: Display:     Zen:                        411,136,379
+LogIoStore: Display:         ExportBundleData        189,958,491 bytes over 580 reads
+LogIoStore: Display:         BulkData                221,177,888 bytes over 108 reads
+LogIoStore: Display:     Loose File:                           0
+LogIoStore: Display:     Memory:                      14,866,384
+LogIoStore: Display:         ShaderCodeLibrary           302,600 bytes over 4 reads
+LogIoStore: Display:         ShaderCode               14,563,784 bytes over 1,122 reads
+LogIoStore: Display: Calculating stats...
+LogIoStore: Display:
+LogIoStore: Display: Container Summary
+LogIoStore: Display: ==================
+LogIoStore: Display:
+LogIoStore: Display:                      Container      Flags      Chunk(s) #       TOC (KiB)       Raw Size (MiB)           Size (MiB)
+LogIoStore: Display: -------------------------------------------------------------------------------------------------------------------
+LogIoStore: Display:                         global  -/-/-/-/-               1            0.79                 3.14                 3.14 -
+LogIoStore: Display:         TheDheerFather-Windows  C/-/-/I/-            1252          180.15               399.94               185.98 (53.50% Oodle)
+LogIoStore: Display: -------------------------------------------------------------------------------------------------------------------
+LogIoStore: Display:                          Total                       1253          180.94               403.08               189.12
+LogIoStore: Display:
+LogIoStore: Display: ** Flags: (C)ompressed / (E)ncrypted / (S)igned) / (I)ndexed) / (O)nDemand **
+LogIoStore: Display:
+LogIoStore: Display: Compression block padding:     0.74 MiB
+LogIoStore: Display:
+LogIoStore: Display: Container Directory Index
+LogIoStore: Display: ==========================
+LogIoStore: Display:
+LogIoStore: Display:                      Container      Size (KiB)
+LogIoStore: Display: ----------------------------------------------
+LogIoStore: Display:                         global            0.00
+LogIoStore: Display:         TheDheerFather-Windows           33.93
+LogIoStore: Display:
+LogIoStore: Display: Container Patch Report
+LogIoStore: Display: ========================
+LogIoStore: Display:
+LogIoStore: Display:                      Container          Total #       Modified #          Added #   Modified (MiB)      Added (MiB)
+LogIoStore: Display: -------------------------------------------------------------------------------------------------------------------
+LogIoStore: Display:                         global                1                0                0             0.00             0.00
+LogIoStore: Display:         TheDheerFather-Windows             1252                0             1252             0.00           185.24
+LogIoStore: Display: -------------------------------------------------------------------------------------------------------------------
+LogIoStore: Display:
+LogIoStore: Display: PackageStore
+LogIoStore: Display: =============
+LogIoStore: Display:
+LogIoStore: Display:                      Container      Size (KiB)      Packages #     Localized #
+LogIoStore: Display: ------------------------------------------------------------------------------
+LogIoStore: Display:         TheDheerFather-Windows              16             580               0
+LogIoStore: Display: ------------------------------------------------------------------------------
+LogIoStore: Display:                          Total              16             580               0
+LogIoStore: Display:
+LogIoStore: Display:
+LogIoStore: Display: Input:       580 Packages
+LogIoStore: Display: Input:         0   B UExp
+LogIoStore: Display: Input:    181.16 MiB UAsset
+LogIoStore: Display: Input:    210.93 MiB UBulk
+LogIoStore: Display: Input:      5.10 MiB for 382 Global shaders
+LogIoStore: Display: Input:    315.14 KiB for 83 Shared shaders
+LogIoStore: Display: Input:         0   B for 0 Unique shaders
+LogIoStore: Display: Input:      1.54 MiB for 96 Inline shaders
+LogIoStore: Display:
+LogIoStore: Display: Output:      746 Imported package entries
+LogIoStore: Display: Output:      325 Packages without imports
+LogIoStore: Display: Output:        0 Public runtime script objects
+LogIoStore: Display: Output:     3.14 MiB InitialLoadData
+LogIoStore: Display:
+LogIoStore: Display: Success
+LogPakFile: Display: UnrealPak executed in 1.581214 seconds
+Took 1.86s to run UnrealPak.exe, ExitCode=0
+DumpManifest: C:\Users\RedIce\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+Program+Files+2+UE_5.8\FinalCopyWin64_UFSFiles.txt, NumItems: 2432
+DumpManifest: C:\Users\RedIce\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+Program+Files+2+UE_5.8\FinalCopyWin64_NonUFSFiles.txt, NumItems: 34
+DumpManifest: C:\Users\RedIce\AppData\Roaming\Unreal Engine\AutomationTool\Logs\D+Program+Files+2+UE_5.8\FinalCopyWin64_NonUFSFilesDebug.txt, NumItems: 6
+Copying NonUFSFiles to staging directory: D:\NSA Unreal Engine\New Folder For Migration\Saved\StagedBuilds\Windows
+Copying DebugFiles to staging directory: D:\NSA Unreal Engine\New Folder For Migration\Saved\StagedBuilds\Windows
+Stage command time: 13.19 s
+********** STAGE COMMAND COMPLETED **********
+********** ARCHIVE COMMAND STARTED **********
+Archiving to D:\NSA Unreal Engine\Packaged
+Archive command time: 5.18 s
+********** ARCHIVE COMMAND COMPLETED **********
+BuildCookRun time: 206.67 s
+BUILD SUCCESSFUL
+AutomationTool executed for 0h 3m 34s
+AutomationTool exiting with ExitCode=0 (Success)
