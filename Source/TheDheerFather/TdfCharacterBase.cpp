@@ -67,6 +67,11 @@ void ATdfCharacterBase::BeginPlay()
 	Super::BeginPlay();
 	ApplyMoveSpeed(MoveSpeed);
 
+	if (FirstPersonCamera)
+	{
+		CameraBaseRelLoc = FirstPersonCamera->GetRelativeLocation();
+	}
+
 	// If a real character model is assigned, hide the placeholder cylinder.
 	if (BodyMesh && GetMesh() && GetMesh()->GetSkeletalMeshAsset())
 	{
@@ -88,6 +93,17 @@ void ATdfCharacterBase::Tick(float DeltaSeconds)
 	}
 
 	UpdateStaminaAndMovement(DeltaSeconds);
+
+	// PEEKING (local camera only): lean around the corner while RMB is held.
+	if (IsLocallyControlled() && FirstPersonCamera)
+	{
+		const float Target = (bSecondaryHeld && bAllowHoldBreath && !bIsDown && !bWantsToClimb) ? PeekInput : 0.f;
+		CurrentPeek = FMath::FInterpTo(CurrentPeek, Target, DeltaSeconds, 8.f);
+		if (FMath::Abs(CurrentPeek) > 0.01f || !FirstPersonCamera->GetRelativeLocation().Equals(CameraBaseRelLoc))
+		{
+			FirstPersonCamera->SetRelativeLocation(CameraBaseRelLoc + FVector(0.f, CurrentPeek * 60.f, FMath::Abs(CurrentPeek) * -6.f));
+		}
+	}
 }
 
 UAbilitySystemComponent* ATdfCharacterBase::GetAbilitySystemComponent() const
@@ -370,8 +386,8 @@ void ATdfCharacterBase::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
 
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ATdfCharacterBase::OnJumpPressed);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ATdfCharacterBase::OnJumpReleased);
-	PlayerInputComponent->BindAction("Secondary", IE_Pressed, this, &ATdfCharacterBase::OnSecondaryAction);
-	PlayerInputComponent->BindAction("Secondary", IE_Released, this, &ATdfCharacterBase::OnSecondaryReleased);
+	PlayerInputComponent->BindAction("Secondary", IE_Pressed, this, &ATdfCharacterBase::OnSecondaryPressedInternal);
+	PlayerInputComponent->BindAction("Secondary", IE_Released, this, &ATdfCharacterBase::OnSecondaryReleasedInternal);
 
 	PlayerInputComponent->BindAction("Sprint", IE_Pressed, this, &ATdfCharacterBase::OnSprintPressed);
 	PlayerInputComponent->BindAction("Sprint", IE_Released, this, &ATdfCharacterBase::OnSprintReleased);
@@ -410,12 +426,33 @@ void ATdfCharacterBase::MoveForward(float Value)
 
 void ATdfCharacterBase::MoveRight(float Value)
 {
+	// PEEKING: while RMB is held, A/D lean the camera instead of strafing (survivors only).
+	if (bSecondaryHeld && bAllowHoldBreath && !bIsDown)
+	{
+		PeekInput = FMath::Clamp(Value, -1.f, 1.f);
+		return;
+	}
+	PeekInput = 0.f;
+
 	if (Controller && Value != 0.f)
 	{
 		const FRotator YawRotation(0.f, Controller->GetControlRotation().Yaw, 0.f);
 		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
 		AddMovementInput(Direction, Value);
 	}
+}
+
+void ATdfCharacterBase::OnSecondaryPressedInternal()
+{
+	bSecondaryHeld = true;
+	OnSecondaryAction();
+}
+
+void ATdfCharacterBase::OnSecondaryReleasedInternal()
+{
+	bSecondaryHeld = false;
+	PeekInput = 0.f;
+	OnSecondaryReleased();
 }
 
 void ATdfCharacterBase::OnSprintPressed() { bWantsToSprint = true; if (!HasAuthority()) { ServerSetSprint(true); } }
@@ -898,8 +935,24 @@ void ATdfCharacterBase::UpdateStaminaAndMovement(float DeltaSeconds)
 	{
 		if (CanClimbTrees() && Stamina > 0.f && IsFacingClimbableTree() && !bIsStunned)
 		{
+			// Freeze the body's facing so looking around doesn't twist you off the trunk.
+			if (!bClimbLookDecoupled)
+			{
+				bClimbLookDecoupled = true;
+				bUseControllerRotationYaw = false;
+				if (APlayerController* PC = Cast<APlayerController>(GetController()))
+				{
+					if (PC->PlayerCameraManager)
+					{
+						const float AnchorYaw = GetActorRotation().Yaw;
+						PC->PlayerCameraManager->ViewYawMin = AnchorYaw - 135.f;
+						PC->PlayerCameraManager->ViewYawMax = AnchorYaw + 135.f;
+					}
+				}
+			}
+
 			Move->SetMovementMode(MOVE_Flying);
-			const bool bHanging = bWantsToWalk; // Ctrl: cling to the trunk
+			const bool bHanging = bWantsToWalk; // Ctrl: cling to the trunk + look around freely
 			Move->Velocity = bHanging ? FVector::ZeroVector : FVector(0.f, 0.f, ClimbSpeed);
 			const float Cost = bHanging ? HangStaminaPerSecond : ClimbStaminaPerSecond;
 			AttributeSet->SetStamina(FMath::Max(0.f, Stamina - Cost * DeltaSeconds));
@@ -907,6 +960,20 @@ void ATdfCharacterBase::UpdateStaminaAndMovement(float DeltaSeconds)
 			return;
 		}
 		bWantsToClimb = false;
+	}
+	if (bClimbLookDecoupled)
+	{
+		// Off the trunk: re-couple facing to the camera and unclamp the view.
+		bClimbLookDecoupled = false;
+		bUseControllerRotationYaw = true;
+		if (APlayerController* PC = Cast<APlayerController>(GetController()))
+		{
+			if (PC->PlayerCameraManager)
+			{
+				PC->PlayerCameraManager->ViewYawMin = 0.f;
+				PC->PlayerCameraManager->ViewYawMax = 359.998993f;
+			}
+		}
 	}
 	if (Move->MovementMode == MOVE_Flying)
 	{

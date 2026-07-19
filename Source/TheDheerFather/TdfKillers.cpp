@@ -108,7 +108,7 @@ ATdfKiller_Lucki::ATdfKiller_Lucki()
 
 	KillerType = ETdfKillerType::Stalker_Lucki;
 	Stats.Stamina = 50.f;
-	Stats.Speed = 70.f;     // waddles a bit quicker now, still needs the Prius
+	Stats.Speed = 85.f;     // brisk waddle — the Prius is still the play
 	Stats.Kealth = 150.f;
 	Stats.Damage = 49.f;
 
@@ -198,10 +198,35 @@ void ATdfKiller_Lucki::ServerSetCar_Implementation(bool bNewInCar)
 		ParkedCar->SetActorRotation(GetActorRotation());
 		ParkedCar->SetActorHiddenInGame(false);
 		ParkedCar->SetActorEnableCollision(true);
+
+		// Bailing from a MOVING car: you eat the tarmac.
+		if (GetVelocity().Size2D() > 500.f)
+		{
+			if (AttributeSet)
+			{
+				AttributeSet->SetHealth(FMath::Max(5.f, AttributeSet->GetHealth() - 20.f));
+			}
+			ApplyStun(1.2f); // down he goes, rolling
+			bBailSlowed = true;
+			GetWorldTimerManager().SetTimer(BailTimerHandle, this, &ATdfKiller_Lucki::EndBailSlow, 4.f, false);
+			if (GEngine)
+			{
+				GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Orange, TEXT("LUCKI HIT THE TARMAC - rolling..."));
+			}
+		}
 	}
 
 	bInCar = bNewInCar;
 	ApplyCarState();
+}
+
+void ATdfKiller_Lucki::EndBailSlow()
+{
+	bBailSlowed = false;
+	if (!bIsDead)
+	{
+		ApplyCarState();
+	}
 }
 
 void ATdfKiller_Lucki::HandleCarInteract()
@@ -316,7 +341,12 @@ void ATdfKiller_Lucki::ApplyCarState()
 	if (AttributeSet)
 	{
 		const bool bStarving = Hunger < StarvingThreshold;
-		const float FootSpeed = bStarving ? 5.f : Stats.Speed;
+		// Starving is painful but playable now (was 5 — "unplayable", correct).
+		float FootSpeed = bStarving ? 35.f : Stats.Speed;
+		if (bBailSlowed)
+		{
+			FootSpeed *= 0.35f; // limping after eating the tarmac
+		}
 
 		float DriveSpeed = 2.f; // engine off: the Prius is furniture
 		if (ParkedCar.IsValid() && ParkedCar->bEngineOn)

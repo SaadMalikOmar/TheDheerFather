@@ -60,10 +60,41 @@ void ATdfDJDog::Tick(float DeltaSeconds)
 	if (UCharacterMovementComponent* Move = GetCharacterMovement())
 	{
 		Move->MaxWalkSpeed = 460.f; // absolute cm/s — bypasses the player speed pipeline
-		if (Move->MovementMode == MOVE_None)
+		Move->MaxAcceleration = 2048.f;
+		if (Move->MovementMode == MOVE_None || Move->MovementMode == MOVE_Flying)
 		{
 			Move->SetMovementMode(MOVE_Walking);
 		}
+	}
+
+	// PUSH: runners can shove him around — he's a dog, not a boulder.
+	for (TActorIterator<ATdfCharacterBase> It(GetWorld()); It; ++It)
+	{
+		ATdfCharacterBase* Other = *It;
+		if (!Other || Other == this || Other->IsDead())
+		{
+			continue;
+		}
+		const FVector Away = GetActorLocation() - Other->GetActorLocation();
+		if (Away.Size2D() < 130.f && Other->GetVelocity().Size2D() > 30.f)
+		{
+			if (UCharacterMovementComponent* Move = GetCharacterMovement())
+			{
+				Move->AddImpulse(Away.GetSafeNormal2D() * 420.f, true);
+			}
+			break;
+		}
+	}
+
+	// TEMP diagnostics (remove once DJ is confirmed moving in the wild).
+	if (GEngine)
+	{
+		GEngine->AddOnScreenDebugMessage(77, 1.f, FColor::Yellow,
+			FString::Printf(TEXT("DJ: mode=%d ctrl=%s speed=%.0f v=%.0f"),
+				GetCharacterMovement() ? (int32)GetCharacterMovement()->MovementMode.GetValue() : -1,
+				GetController() ? TEXT("yes") : TEXT("NO"),
+				GetCharacterMovement() ? GetCharacterMovement()->MaxWalkSpeed : -1.f,
+				GetVelocity().Size2D()));
 	}
 
 	BiteCooldownRemaining = FMath::Max(0.f, BiteCooldownRemaining - DeltaSeconds);
@@ -92,6 +123,12 @@ void ATdfDJDog::Tick(float DeltaSeconds)
 	const AActor* Master = GetOwner();
 
 	auto MoveToward = [this](const FVector& Loc) {
+		// Primary: direct AI move request (no navmesh needed, drives the CMC itself).
+		if (AAIController* AI = Cast<AAIController>(GetController()))
+		{
+			AI->MoveToLocation(Loc, 90.f, true, /*bUsePathfinding*/ false, false, false);
+		}
+		// Backup: raw movement input for the same frame.
 		AddMovementInput((Loc - GetActorLocation()).GetSafeNormal2D(), 1.f);
 	};
 	auto TryBite = [&](ATdfRunnerCharacter* Victim, float Dist) {

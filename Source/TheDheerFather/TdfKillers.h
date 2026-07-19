@@ -81,6 +81,11 @@ public:
 
 	class ATdfPriusProp* GetCar() const { return ParkedCar.Get(); }
 
+	/** Bailing from a moving Prius: hit the tarmac, take damage, limp for 4 seconds. */
+	bool bBailSlowed = false;
+	FTimerHandle BailTimerHandle;
+	void EndBailSlow();
+
 	UPROPERTY(Replicated, VisibleInstanceOnly, BlueprintReadOnly, Category = "Tdf|Lucki")
 	bool bInCar = false;
 
