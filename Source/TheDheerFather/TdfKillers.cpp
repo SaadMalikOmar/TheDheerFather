@@ -265,6 +265,27 @@ void ATdfKiller_Lucki::OnSprintPressed()
 	Super::OnSprintPressed();
 }
 
+void ATdfKiller_Lucki::OnJumpPressed()
+{
+	if (bInCar)
+	{
+		if (IsLocallyControlled())
+		{
+			ServerToggleHeadlights(); // SPACE = headlights while driving
+		}
+		return;
+	}
+	Super::OnJumpPressed();
+}
+
+void ATdfKiller_Lucki::ServerToggleHeadlights_Implementation()
+{
+	if (bInCar && ParkedCar.IsValid())
+	{
+		ParkedCar->ToggleHeadlights();
+	}
+}
+
 void ATdfKiller_Lucki::OnSecondaryAction()
 {
 	if (!IsLocallyControlled())
@@ -351,8 +372,9 @@ void ATdfKiller_Lucki::ApplyCarState()
 		float DriveSpeed = 2.f; // engine off: the Prius is furniture
 		if (ParkedCar.IsValid() && ParkedCar->bEngineOn)
 		{
-			// Petrol = full speed; electric-only = a quiet crawl.
-			DriveSpeed = (ParkedCar->Petrol > 0.f) ? CarSpeed : CarSpeed * 0.45f;
+			// Petrol = full speed. Ctrl = ECO mode (silent, battery-only). No petrol = eco pace anyway.
+			const bool bEco = bWantsToWalk || ParkedCar->Petrol <= 0.f;
+			DriveSpeed = bEco ? CarSpeed * 0.45f : CarSpeed;
 		}
 		AttributeSet->SetMoveSpeed(bInCar ? DriveSpeed : FootSpeed);
 	}
@@ -372,8 +394,8 @@ void ATdfKiller_Lucki::Tick(float DeltaSeconds)
 		return;
 	}
 
-	// Hunger: always draining. Feeding on a downed runner (stand next to them) refills.
-	float HungerGain = -HungerDrainPerSecond * DeltaSeconds;
+	// Hunger drains on foot only — sitting in the Prius costs nothing. Feeding on a downed runner refills.
+	float HungerGain = bInCar ? 0.f : -HungerDrainPerSecond * DeltaSeconds;
 	for (TActorIterator<ATdfRunnerCharacter> It(GetWorld()); It; ++It)
 	{
 		const ATdfRunnerCharacter* Runner = *It;

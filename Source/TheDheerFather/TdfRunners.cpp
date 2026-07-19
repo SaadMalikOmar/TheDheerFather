@@ -28,9 +28,11 @@ void ATdfRunner_Dheer::OnAbility2Pressed()
 	}
 	bWatchHeld = true;
 
-	// Head locks down onto the wrist while he checks it.
+	// Remember exactly where he was looking, then lock his head down onto the wrist.
 	if (APlayerController* PC = Cast<APlayerController>(GetController()))
 	{
+		PreWatchControlRotation = PC->GetControlRotation();
+		bHasPreWatchRotation = true;
 		if (PC->PlayerCameraManager)
 		{
 			PC->PlayerCameraManager->ViewPitchMin = -52.f;
@@ -54,6 +56,12 @@ void ATdfRunner_Dheer::OnAbility2Released()
 			PC->PlayerCameraManager->ViewPitchMin = -89.9f;
 			PC->PlayerCameraManager->ViewPitchMax = 89.9f;
 		}
+		// Eyes snap back to exactly where they were before the watch check.
+		if (bHasPreWatchRotation)
+		{
+			PC->SetControlRotation(PreWatchControlRotation);
+			bHasPreWatchRotation = false;
+		}
 	}
 }
 
@@ -61,10 +69,21 @@ void ATdfRunner_Dheer::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
 
-	// The heartbeat sensor battery only drains while he's actually looking at it.
-	if (IsLocallyControlled() && bWatchHeld && WatchBattery > 0.f)
+	if (!IsLocallyControlled())
+	{
+		return;
+	}
+
+	// Battery drains only while he's looking at it...
+	if (bWatchHeld && WatchBattery > 0.f)
 	{
 		WatchBattery = FMath::Max(0.f, WatchBattery - DeltaSeconds);
+	}
+	// ...and trickle-charges kinetically — ONLY while actually running (~3 min for a full bar).
+	else if (!bWatchHeld && WatchBattery < 20.f
+		&& bWantsToSprint && GetVelocity().Size2D() > 400.f)
+	{
+		WatchBattery = FMath::Min(20.f, WatchBattery + WatchRechargePerSecond * DeltaSeconds);
 	}
 }
 

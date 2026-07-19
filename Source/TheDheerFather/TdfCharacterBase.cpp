@@ -6,6 +6,8 @@
 #include "TdfHouseActors.h"
 #include "TdfKillers.h"
 #include "TdfRunnerCharacter.h"
+#include "TdfDJDog.h"
+#include "TdfDeployables.h"
 #include "EngineUtils.h"
 #include "AbilitySystemComponent.h"
 #include "Camera/CameraComponent.h"
@@ -97,13 +99,51 @@ void ATdfCharacterBase::Tick(float DeltaSeconds)
 	// PEEKING (local camera only): lean around the corner while RMB is held.
 	if (IsLocallyControlled() && FirstPersonCamera)
 	{
-		const float Target = (bSecondaryHeld && bAllowHoldBreath && !bIsDown && !bWantsToClimb) ? PeekInput : 0.f;
+		float Target = (bSecondaryHeld && bAllowHoldBreath && !bIsDown && !bWantsToClimb) ? PeekInput : 0.f;
+
+		// Each lean costs stamina: 5 still, 20 moving, 30 sprinting. No juice = no peek.
+		if (FMath::Abs(Target) > 0.1f && !bPeekCostCharged)
+		{
+			const bool bMoving = GetVelocity().Size2D() > 40.f;
+			const float Cost = (bMoving && bWantsToSprint) ? 30.f : bMoving ? 20.f : 5.f;
+			if (GetStamina() >= Cost)
+			{
+				bPeekCostCharged = true;
+				SpendStaminaLocal(Cost);
+				if (!HasAuthority())
+				{
+					ServerSpendStamina(Cost);
+				}
+			}
+			else
+			{
+				Target = 0.f; // too tired to lean
+			}
+		}
+		else if (FMath::Abs(Target) <= 0.1f)
+		{
+			bPeekCostCharged = false;
+		}
+
 		CurrentPeek = FMath::FInterpTo(CurrentPeek, Target, DeltaSeconds, 8.f);
 		if (FMath::Abs(CurrentPeek) > 0.01f || !FirstPersonCamera->GetRelativeLocation().Equals(CameraBaseRelLoc))
 		{
 			FirstPersonCamera->SetRelativeLocation(CameraBaseRelLoc + FVector(0.f, CurrentPeek * 60.f, FMath::Abs(CurrentPeek) * -6.f));
 		}
 	}
+}
+
+void ATdfCharacterBase::SpendStaminaLocal(float Amount)
+{
+	if (AttributeSet)
+	{
+		AttributeSet->SetStamina(FMath::Max(0.f, AttributeSet->GetStamina() - Amount));
+	}
+}
+
+void ATdfCharacterBase::ServerSpendStamina_Implementation(float Amount)
+{
+	SpendStaminaLocal(FMath::Clamp(Amount, 0.f, 30.f));
 }
 
 UAbilitySystemComponent* ATdfCharacterBase::GetAbilitySystemComponent() const
@@ -590,6 +630,22 @@ void ATdfCharacterBase::StandUp()
 
 void ATdfCharacterBase::HandleServerInteract()
 {
+	// DJ has your leg: every E press is a 1% chance to rip free. Nothing else works.
+	if (ATdfRunnerCharacter* DraggedSelf = Cast<ATdfRunnerCharacter>(this))
+	{
+		if (DraggedSelf->bDraggedByDJ)
+		{
+			for (TActorIterator<ATdfDJDog> It(GetWorld()); It; ++It)
+			{
+				if ((*It)->TryStruggleFree(DraggedSelf))
+				{
+					break;
+				}
+			}
+			return;
+		}
+	}
+
 	// Tung Tung's E is for kidnapping, not first aid.
 	if (ATdfKiller_TungTung* TungTung = Cast<ATdfKiller_TungTung>(this))
 	{
@@ -610,7 +666,7 @@ void ATdfCharacterBase::HandleServerInteract()
 		return;
 	}
 
-	// Whatever you're looking at: seats, wardrobes, routers.
+	// Whatever you're looking at: seats, wardrobes, routers... or an unlocked Prius.
 	if (AActor* Target = GetLookAtActor(420.f))
 	{
 		if (ATdfSeat* Seat = Cast<ATdfSeat>(Target))
@@ -622,6 +678,15 @@ void ATdfCharacterBase::HandleServerInteract()
 		{
 			Router->CheckRouter(this);
 			return;
+		}
+		// Lucki left it unlocked with the keys in? A runner can STEAL them.
+		if (ATdfPriusProp* Prius = Cast<ATdfPriusProp>(Target))
+		{
+			if (ATdfRunnerCharacter* Thief = Cast<ATdfRunnerCharacter>(this))
+			{
+				Prius->TryStealKeys(Thief);
+				return;
+			}
 		}
 	}
 

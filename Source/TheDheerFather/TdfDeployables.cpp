@@ -4,6 +4,7 @@
 #include "TdfKillerCharacter.h"
 #include "TdfKillers.h"
 #include "TdfTypes.h"
+#include "Components/SpotLightComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/TextRenderComponent.h"
 #include "DrawDebugHelpers.h"
@@ -52,6 +53,22 @@ ATdfPriusProp::ATdfPriusProp()
 	{
 		CarMesh->SetStaticMesh(MeshAsset.Object);
 	}
+
+	// Headlights (SPACE toggles them while driving).
+	HeadlightL = CreateDefaultSubobject<USpotLightComponent>(TEXT("HeadlightL"));
+	HeadlightL->SetupAttachment(CarMesh);
+	HeadlightL->SetRelativeLocation(FVector(52.f, -18.f, 8.f));
+	HeadlightL->SetIntensity(80000.f);
+	HeadlightL->SetOuterConeAngle(28.f);
+	HeadlightL->SetAttenuationRadius(4500.f);
+	HeadlightL->SetVisibility(false);
+	HeadlightR = CreateDefaultSubobject<USpotLightComponent>(TEXT("HeadlightR"));
+	HeadlightR->SetupAttachment(CarMesh);
+	HeadlightR->SetRelativeLocation(FVector(52.f, 18.f, 8.f));
+	HeadlightR->SetIntensity(80000.f);
+	HeadlightR->SetOuterConeAngle(28.f);
+	HeadlightR->SetAttenuationRadius(4500.f);
+	HeadlightR->SetVisibility(false);
 }
 
 void ATdfPriusProp::BeginPlay()
@@ -77,6 +94,49 @@ void ATdfPriusProp::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLif
 	DOREPLIFETIME(ATdfPriusProp, EngineStartRemaining);
 	DOREPLIFETIME(ATdfPriusProp, Petrol);
 	DOREPLIFETIME(ATdfPriusProp, Battery);
+	DOREPLIFETIME(ATdfPriusProp, bHeadlightsOn);
+	DOREPLIFETIME(ATdfPriusProp, bKeysStolen);
+}
+
+void ATdfPriusProp::ToggleHeadlights()
+{
+	if (!HasAuthority())
+	{
+		return;
+	}
+	bHeadlightsOn = !bHeadlightsOn;
+	if (GEngine)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 1.5f, FColor::Cyan, bHeadlightsOn ? TEXT("Headlights ON") : TEXT("Headlights off"));
+	}
+}
+
+void ATdfPriusProp::TryStealKeys(ATdfRunnerCharacter* Thief)
+{
+	if (!HasAuthority() || !Thief)
+	{
+		return;
+	}
+	if (bLocked)
+	{
+		return; // locked door beats sticky fingers
+	}
+	if (!bKeysInserted)
+	{
+		if (GEngine) { GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Silver, TEXT("No keys inside...")); }
+		return;
+	}
+	if (Driver.IsValid())
+	{
+		return; // Lucki's literally sitting in it
+	}
+	bKeysInserted = false;
+	bKeysStolen = true;
+	KeyThief = Thief;
+	if (GEngine)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, TEXT("SOMEONE STOLE THE PRIUS KEYS! It won't start until the thief is dealt with."));
+	}
 }
 
 void ATdfPriusProp::ToggleLock()
@@ -144,9 +204,24 @@ void ATdfPriusProp::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
 
+	// Headlight visuals run on every machine off the replicated flag.
+	if (HeadlightL) { HeadlightL->SetVisibility(bHeadlightsOn && !IsHidden()); }
+	if (HeadlightR) { HeadlightR->SetVisibility(bHeadlightsOn && !IsHidden()); }
+
 	if (!HasAuthority())
 	{
 		return;
+	}
+
+	// Stolen keys find their way home when the thief dies (Lucki keeps a spare, allegedly).
+	if (bKeysStolen && (!KeyThief.IsValid() || KeyThief->IsDead()))
+	{
+		bKeysStolen = false;
+		bKeysInserted = true;
+		if (GEngine)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 4.f, FColor::Cyan, TEXT("The Prius keys are back in the ignition."));
+		}
 	}
 
 	// Cranking.

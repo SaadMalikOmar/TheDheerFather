@@ -151,6 +151,11 @@ protected:
 	float CurrentPeek = 0.f;
 	FVector CameraBaseRelLoc = FVector::ZeroVector;
 
+	/** Peeking costs stamina per lean: 5 still, 20 moving, 30 sprinting. */
+	bool bPeekCostCharged = false;
+	UFUNCTION(Server, Reliable) void ServerSpendStamina(float Amount);
+	void SpendStaminaLocal(float Amount);
+
 	/** While climbing, actor yaw is decoupled so you can look around (±135° on the trunk). */
 	bool bClimbLookDecoupled = false;
 
@@ -213,8 +218,8 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Tdf|State")
 	float ReviveRange = 250.f;
 
-	/** Jump that costs stamina (1/3 of max); blocked when too tired. */
-	void OnJumpPressed();
+	/** Jump that costs stamina (1/3 of max); blocked when too tired. (Lucki: headlights in the Prius.) */
+	virtual void OnJumpPressed();
 
 	/** Per-frame stamina drain/regen, sprint gradient, uphill, breath. */
 	void UpdateStaminaAndMovement(float DeltaSeconds);

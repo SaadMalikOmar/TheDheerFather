@@ -43,6 +43,10 @@ public:
 	void ToggleLock();
 	void ToggleKeys();
 	void RequestEngineToggle();
+	void ToggleHeadlights();
+
+	/** Runners can rob an UNLOCKED Prius with the keys inside. Keys come back when the thief dies. */
+	void TryStealKeys(class ATdfRunnerCharacter* Thief);
 
 	UPROPERTY(Replicated, VisibleInstanceOnly, BlueprintReadOnly, Category = "Tdf|Car") bool bLocked = false;
 	UPROPERTY(Replicated, VisibleInstanceOnly, BlueprintReadOnly, Category = "Tdf|Car") bool bKeysInserted = false;
@@ -50,6 +54,11 @@ public:
 	UPROPERTY(Replicated, VisibleInstanceOnly, BlueprintReadOnly, Category = "Tdf|Car") float EngineStartRemaining = 0.f;
 	UPROPERTY(Replicated, VisibleInstanceOnly, BlueprintReadOnly, Category = "Tdf|Car") float Petrol = 100.f;
 	UPROPERTY(Replicated, VisibleInstanceOnly, BlueprintReadOnly, Category = "Tdf|Car") float Battery = 100.f;
+	UPROPERTY(Replicated, VisibleInstanceOnly, BlueprintReadOnly, Category = "Tdf|Car") bool bHeadlightsOn = false;
+	UPROPERTY(Replicated, VisibleInstanceOnly, BlueprintReadOnly, Category = "Tdf|Car") bool bKeysStolen = false;
+
+	/** Who nicked the keys (server). */
+	TWeakObjectPtr<class ATdfRunnerCharacter> KeyThief;
 
 	UPROPERTY(EditAnywhere, Category = "Tdf|Car") float EngineStartSeconds = 5.f;
 	UPROPERTY(EditAnywhere, Category = "Tdf|Car") float PetrolBurnPerSecond = 0.9f;
@@ -64,6 +73,9 @@ protected:
 
 	UPROPERTY(VisibleAnywhere, Category = "Tdf")
 	UStaticMeshComponent* CarMesh;
+
+	UPROPERTY(VisibleAnywhere, Category = "Tdf") class USpotLightComponent* HeadlightL;
+	UPROPERTY(VisibleAnywhere, Category = "Tdf") class USpotLightComponent* HeadlightR;
 };
 
 /** The petrol station: "MOST HATED S.O". Park with the engine off to refuel. */

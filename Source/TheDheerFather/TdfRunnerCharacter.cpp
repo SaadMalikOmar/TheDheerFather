@@ -49,6 +49,7 @@ void ATdfRunnerCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& 
 	DOREPLIFETIME(ATdfRunnerCharacter, bHasEscaped);
 	DOREPLIFETIME(ATdfRunnerCharacter, bHasGeneratorFinder);
 	DOREPLIFETIME(ATdfRunnerCharacter, bHasRepairKit);
+	DOREPLIFETIME(ATdfRunnerCharacter, bDraggedByDJ);
 	DOREPLIFETIME(ATdfRunnerCharacter, CurrentWeapon);
 	DOREPLIFETIME(ATdfRunnerCharacter, WeaponDurability);
 	DOREPLIFETIME(ATdfRunnerCharacter, bBeingCarried);

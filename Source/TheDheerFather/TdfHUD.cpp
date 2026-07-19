@@ -396,6 +396,12 @@ void ATdfHUD::DrawHUD()
 	// Lucki's dashboard.
 	if (const ATdfKiller_Lucki* Lucki = Cast<ATdfKiller_Lucki>(Char))
 	{
+		// Hunger bar — always visible (doesn't drain while driving).
+		DrawText(FString::Printf(TEXT("Hunger  %.0f / 100"), Lucki->Hunger),
+			FLinearColor(1.f, 0.6f, 0.2f), Margin, StatusY - 46.f, nullptr, 1.0f);
+		DrawRect(FLinearColor(0.12f, 0.08f, 0.04f, 0.85f), Margin, StatusY - 28.f, 220.f, 10.f);
+		DrawRect(FLinearColor(1.f, 0.55f, 0.1f), Margin, StatusY - 28.f, 220.f * FMath::Clamp(Lucki->Hunger / 100.f, 0.f, 1.f), 10.f);
+
 		if (Lucki->bInCar)
 		{
 			if (const ATdfPriusProp* Car = Lucki->GetCar())
@@ -414,6 +420,16 @@ void ATdfHUD::DrawHUD()
 				}
 				DrawText(Dash, FLinearColor(0.4f, 0.8f, 1.f), Margin, StatusY - 74.f, nullptr, 1.05f);
 			}
+		}
+	}
+
+	// --- DJ has your leg: nothing else matters, SPAM E ---
+	if (const ATdfRunnerCharacter* DraggedRunner = Cast<ATdfRunnerCharacter>(Char))
+	{
+		if (DraggedRunner->bDraggedByDJ)
+		{
+			DrawText(TEXT("DJ HAS YOUR LEG!  SPAM [E] TO BREAK FREE (1% per press)"),
+				FLinearColor(1.f, 0.15f, 0.1f), Canvas->SizeX * 0.5f - 260.f, Canvas->SizeY * 0.5f, nullptr, 1.5f);
 		}
 	}
 
@@ -456,7 +472,10 @@ void ATdfHUD::DrawHUD()
 				}
 				else
 				{
-					Prompt = TEXT("A blue Prius. It's locked to you.");
+					// Runners: an unlocked Prius with keys inside is BEGGING to be robbed.
+					Prompt = Prius->bLocked ? TEXT("A blue Prius. Locked.")
+						: Prius->bKeysInserted ? TEXT("[E] STEAL THE KEYS")
+						: TEXT("A blue Prius. No keys inside.");
 				}
 			}
 		}

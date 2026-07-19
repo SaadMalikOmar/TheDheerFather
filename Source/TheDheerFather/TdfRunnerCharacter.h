@@ -58,6 +58,10 @@ public:
 	UPROPERTY(Replicated, VisibleInstanceOnly, BlueprintReadOnly, Category = "Tdf|Runner")
 	bool bHasRepairKit = false;
 
+	/** DJ has you by the leg — you can't move. SPAM E: 1% chance per press to break free. */
+	UPROPERTY(Replicated, VisibleInstanceOnly, BlueprintReadOnly, Category = "Tdf|Runner")
+	bool bDraggedByDJ = false;
+
 	/** Held weapon (picked up in the world; see weapons.md). */
 	UPROPERTY(Replicated, VisibleInstanceOnly, BlueprintReadOnly, Category = "Tdf|Runner")
 	ETdfWeaponType CurrentWeapon = ETdfWeaponType::None;
