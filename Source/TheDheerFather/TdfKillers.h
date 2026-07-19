@@ -68,6 +68,10 @@ public:
 	/** Shift in the car = get out. */
 	virtual void OnSprintPressed() override;
 
+	/** SPACE in the car = headlights (no bunny-hopping a Prius). */
+	virtual void OnJumpPressed() override;
+	UFUNCTION(Server, Reliable) void ServerToggleHeadlights();
+
 	/** Server (E): sit in the Prius / toggle the ignition keys. */
 	void HandleCarInteract();
 

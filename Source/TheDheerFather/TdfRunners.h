@@ -31,6 +31,15 @@ public:
 	/** Seconds of heartbeat-sensor battery left (generator sense works even at 0). */
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Tdf|Dheer")
 	float WatchBattery = 20.f;
+
+	/** Kinetic charging: recharges EXTREMELY slowly, and only while he's running. */
+	UPROPERTY(EditDefaultsOnly, Category = "Tdf|Dheer")
+	float WatchRechargePerSecond = 0.12f;
+
+private:
+	/** Where he was looking before the watch pulled his eyes down (restored on release). */
+	FRotator PreWatchControlRotation = FRotator::ZeroRotator;
+	bool bHasPreWatchRotation = false;
 };
 
 /** Tank — Troos. 200 HP, immune to Lucki traps; slow, tires fast, and CANNOT climb trees. */

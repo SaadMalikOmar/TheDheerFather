@@ -3,6 +3,7 @@
 #include "TdfGameState.h"
 #include "TdfKillerCharacter.h"
 #include "TdfRunnerCharacter.h"
+#include "TdfDeployables.h"
 #include "AIController.h"
 #include "DrawDebugHelpers.h"
 #include "GameFramework/CharacterMovementComponent.h"
@@ -99,6 +100,51 @@ void ATdfDJDog::Tick(float DeltaSeconds)
 
 	BiteCooldownRemaining = FMath::Max(0.f, BiteCooldownRemaining - DeltaSeconds);
 	MarkCooldownRemaining = FMath::Max(0.f, MarkCooldownRemaining - DeltaSeconds);
+	GrabCooldownRemaining = FMath::Max(0.f, GrabCooldownRemaining - DeltaSeconds);
+
+	// --- DRAGGING: haul the victim back to Lucki or the Prius, whichever's closer ---
+	if (DraggedRunner.IsValid())
+	{
+		ATdfRunnerCharacter* Victim = DraggedRunner.Get();
+		if (Victim->IsDead() || Victim->HasEscaped())
+		{
+			ReleaseDragged(false);
+		}
+		else
+		{
+			FVector Dest = GetActorLocation();
+			float BestDestDist = 1e12f;
+			if (const AActor* Master = GetOwner())
+			{
+				Dest = Master->GetActorLocation();
+				BestDestDist = FVector::Dist(Dest, GetActorLocation());
+			}
+			for (TActorIterator<ATdfPriusProp> It(GetWorld()); It; ++It)
+			{
+				const float Dist = FVector::Dist((*It)->GetActorLocation(), GetActorLocation());
+				if (Dist < BestDestDist)
+				{
+					BestDestDist = Dist;
+					Dest = (*It)->GetActorLocation();
+				}
+			}
+
+			if (BestDestDist < 260.f)
+			{
+				// Delivered: dump them at the boss's feet, dazed.
+				ReleaseDragged(true);
+			}
+			else
+			{
+				if (AAIController* AI = Cast<AAIController>(GetController()))
+				{
+					AI->MoveToLocation(Dest, 120.f, true, false, false, false);
+				}
+				AddMovementInput((Dest - GetActorLocation()).GetSafeNormal2D(), 1.f);
+			}
+			return; // dragging overrides everything else
+		}
+	}
 
 	// The nearest living runner.
 	ATdfRunnerCharacter* Target = nullptr;
@@ -192,14 +238,84 @@ void ATdfDJDog::Tick(float DeltaSeconds)
 		}
 		break;
 
-	default: // ATTACK — lone wolf.
+	default: // ATTACK — lone wolf: bite, then grab the leg and drag them home.
 		if (Target)
 		{
 			MoveToward(Target->GetActorLocation());
+			const bool bInGrabRange = BestDist <= BiteRange + 30.f;
 			TryBite(Target, BestDist);
+			if (bMayBite && bInGrabRange && GrabCooldownRemaining <= 0.f && !DraggedRunner.IsValid()
+				&& !Target->IsDead() && !Target->bTiedToShrine && !Target->bBeingCarried)
+			{
+				GrabRunner(Target);
+			}
 		}
 		break;
 	}
+}
+
+void ATdfDJDog::GrabRunner(ATdfRunnerCharacter* Victim)
+{
+	DraggedRunner = Victim;
+	Victim->bDraggedByDJ = true;
+	Victim->SetActorEnableCollision(false);
+	if (UCharacterMovementComponent* VictimMove = Victim->GetCharacterMovement())
+	{
+		VictimMove->DisableMovement();
+	}
+	Victim->AttachToComponent(GetCapsuleComponent(), FAttachmentTransformRules::SnapToTargetNotIncludingScale);
+	Victim->SetActorRelativeLocation(FVector(-130.f, 0.f, 5.f)); // dragged behind by the leg
+	if (GEngine)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Red, TEXT("DJ HAS SOMEONE BY THE LEG - dragging them to Lucki!"));
+	}
+}
+
+void ATdfDJDog::ReleaseDragged(bool bDeliveredToMaster)
+{
+	ATdfRunnerCharacter* Victim = DraggedRunner.Get();
+	DraggedRunner = nullptr;
+	GrabCooldownRemaining = bDeliveredToMaster ? 3.f : 6.f;
+	if (!Victim)
+	{
+		return;
+	}
+	Victim->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+	Victim->SetActorEnableCollision(true);
+	Victim->bDraggedByDJ = false;
+	if (bDeliveredToMaster)
+	{
+		Victim->ApplyStun(2.5f); // gift-wrapped for Lucki
+	}
+	if (!Victim->bIsDown && !Victim->bIsStunned)
+	{
+		if (UCharacterMovementComponent* VictimMove = Victim->GetCharacterMovement())
+		{
+			VictimMove->SetMovementMode(MOVE_Walking);
+		}
+	}
+}
+
+bool ATdfDJDog::TryStruggleFree(ATdfRunnerCharacter* Runner)
+{
+	if (DraggedRunner.Get() != Runner)
+	{
+		return false;
+	}
+	if (FMath::FRand() < 0.01f) // 1% per press
+	{
+		ReleaseDragged(false);
+		if (GEngine)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 3.f, FColor::Green, TEXT("BROKE FREE FROM DJ!"));
+		}
+		return true;
+	}
+	if (GEngine)
+	{
+		GEngine->AddOnScreenDebugMessage(78, 0.5f, FColor::Orange, TEXT("struggling..."));
+	}
+	return false;
 }
 
 void ATdfDJDog::Multicast_MarkTarget_Implementation(FVector Location)

@@ -37,7 +37,17 @@ public:
 
 	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
+	/** ATTACK mode: after a bite he grabs the leg and DRAGS the victim to Lucki or the Prius. */
+	TWeakObjectPtr<class ATdfRunnerCharacter> DraggedRunner;
+	void ReleaseDragged(bool bDeliveredToMaster);
+
+	/** A dragged runner spams E: 1% chance per press. Returns true if they broke free. */
+	bool TryStruggleFree(class ATdfRunnerCharacter* Runner);
+
 protected:
+	void GrabRunner(class ATdfRunnerCharacter* Victim);
+	float GrabCooldownRemaining = 0.f;
+
 	UFUNCTION(NetMulticast, Unreliable)
 	void Multicast_MarkTarget(FVector Location);
 
