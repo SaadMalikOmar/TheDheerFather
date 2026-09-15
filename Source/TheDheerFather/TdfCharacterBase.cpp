@@ -1,3 +1,4 @@
+// Copyright (c) 2026 Saad Malik Omar. All Rights Reserved.
 #include "TdfCharacterBase.h"
 #include "TdfAbilitySystemComponent.h"
 #include "TdfAttributeSet.h"

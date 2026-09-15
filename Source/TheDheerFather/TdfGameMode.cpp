@@ -1,3 +1,4 @@
+// Copyright (c) 2026 Saad Malik Omar. All Rights Reserved.
 #include "TdfGameMode.h"
 #include "TdfRunnerCharacter.h"
 #include "TdfKillerCharacter.h"

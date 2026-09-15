@@ -24,3 +24,12 @@ build58_*.log
 *.log
 dheerfather-*.zip
 New folder/
+
+# Local editor tooling / plugins (not part of the game)
+Plugins/VibeUE/
+.mcp.json
+CLAUDE.md
+.claude/
+
+# Cesium local tile cache
+cesium-request-cache.sqlite*

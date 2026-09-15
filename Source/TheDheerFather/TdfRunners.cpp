@@ -1,3 +1,4 @@
+// Copyright (c) 2026 Saad Malik Omar. All Rights Reserved.
 #include "TdfRunners.h"
 #include "TdfAttributeSet.h"
 #include "TdfCharacterAbilities.h"

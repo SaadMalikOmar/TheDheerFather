@@ -1,3 +1,4 @@
+// Copyright (c) 2026 Saad Malik Omar. All Rights Reserved.
 #include "TdfAbility_Sprint.h"
 #include "TdfGE_SpeedBoost.h"
 #include "AbilitySystemComponent.h"

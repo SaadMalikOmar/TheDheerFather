@@ -1,3 +1,4 @@
+// Copyright (c) 2026 Saad Malik Omar. All Rights Reserved.
 #include "TdfAbility_GroundSmash.h"
 #include "TdfCharacterBase.h"
 #include "TdfGameState.h"

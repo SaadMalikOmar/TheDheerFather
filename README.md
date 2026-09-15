@@ -1,3 +1,4 @@
+<!-- Copyright (c) 2026 Saad Malik Omar. All Rights Reserved. -->
 # The Dheer Father
 
 An asymmetric multiplayer horror game — **1 killer vs N runners** — built in **Unreal Engine 5.8**.
@@ -100,3 +101,15 @@ All gameplay is C++ (`Source/TheDheerFather`, `Tdf` class prefix) using GAS for 
 - [ ] Runner-driveable Prius
 - [ ] BearCampus map (currently a bare landscape)
 - [ ] Ship networking: own Steam App ID or EOS (currently Valve's shared test AppID 480)
+
+---
+
+## Licence
+
+**Copyright © 2026 Saad Malik Omar. All Rights Reserved.**
+
+This project is **proprietary**. The code, design, characters, and assets may not be
+used, copied, modified, or distributed without express written permission.
+See **[LICENSE](LICENSE)** for the full terms.
+
+Unreal Engine © Epic Games, Inc.
