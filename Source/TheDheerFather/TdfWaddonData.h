@@ -1,4 +1,5 @@
-﻿// GENERATED from OpenStreetMap - Waddon area, Croydon (Wonderpond map). Do not hand-edit.
+// Copyright (c) 2026 Saad Malik Omar. All Rights Reserved.
+// GENERATED from OpenStreetMap - Waddon area, Croydon (Wonderpond map). Do not hand-edit.
 // Local metres, origin at area centre (lat 51.369, lon -0.11825). X = east, Y = north.
 #pragma once
 

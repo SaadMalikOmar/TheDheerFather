@@ -1,3 +1,4 @@
+// Copyright (c) 2026 Saad Malik Omar. All Rights Reserved.
 using UnrealBuildTool;
 
 public class TheDheerFather : ModuleRules

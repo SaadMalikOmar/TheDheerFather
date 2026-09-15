@@ -1,3 +1,4 @@
+// Copyright (c) 2026 Saad Malik Omar. All Rights Reserved.
 #include "TdfGameplayAbility.h"
 #include "TdfCharacterBase.h"
 #include "TdfTypes.h"

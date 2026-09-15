@@ -1,3 +1,4 @@
+// Copyright (c) 2026 Saad Malik Omar. All Rights Reserved.
 #include "TdfShrine.h"
 #include "Components/StaticMeshComponent.h"
 #include "Engine/StaticMesh.h"

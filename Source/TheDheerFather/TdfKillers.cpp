@@ -1,3 +1,4 @@
+// Copyright (c) 2026 Saad Malik Omar. All Rights Reserved.
 #include "TdfKillers.h"
 #include "TdfAttributeSet.h"
 #include "TdfCharacterAbilities.h"
