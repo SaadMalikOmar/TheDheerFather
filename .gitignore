@@ -21,6 +21,6 @@ Thumbs.db
 
 # Local logs / stray archives
 build58_*.log
-package58.log
+*.log
 dheerfather-*.zip
 New folder/
