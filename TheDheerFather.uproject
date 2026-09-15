@@ -57,6 +57,10 @@
 		{
 			"Name": "VibeUE",
 			"Enabled": true
+		},
+		{
+			"Name": "MetaHumanCharacter",
+			"Enabled": true
 		}
 	]
 }

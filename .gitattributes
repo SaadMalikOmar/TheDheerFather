@@ -1,0 +1,19 @@
+# Normalise text line endings so Windows/Mac collaborators don't churn diffs.
+* text=auto
+
+*.cpp   text
+*.h     text
+*.cs    text
+*.ini   text
+*.md    text
+*.json  text
+
+# Unreal binary assets — never touch these.
+*.umap   binary
+*.uasset binary
+*.fbx    binary
+*.png    binary
+*.jpg    binary
+*.wav    binary
+*.dll    binary
+*.exe    binary
